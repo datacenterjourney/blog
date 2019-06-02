@@ -24,6 +24,7 @@ buildDrafts  = false
 buildFuture  = false
 buildExpored = false
 canonifyURLs = true
+crossorigin  = false
 
 enableRobotsTXT = true
 enableGitInfo   = false
