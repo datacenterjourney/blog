@@ -3,106 +3,106 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://datacenterjourney.github.io/posts/2014/09/creating-a-new-theme/</loc>
+    <loc>https://datacenterjourney.com/posts/2014/09/creating-a-new-theme/</loc>
     <lastmod>2014-09-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://datacenterjourney.github.io/posts/2014/03/migrate-to-hugo-from-jekyll/</loc>
+    <loc>https://datacenterjourney.com/posts/2014/03/migrate-to-hugo-from-jekyll/</loc>
     <lastmod>2014-03-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://datacenterjourney.github.io/posts/2014/09/cr%C3%A9ation-dun-nouveau-th%C3%A8me/</loc>
+    <loc>https://datacenterjourney.com/posts/2014/09/cr%C3%A9ation-dun-nouveau-th%C3%A8me/</loc>
     <lastmod>2014-09-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://datacenterjourney.github.io/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://datacenterjourney.github.io/posts/</loc>
+    <loc>https://datacenterjourney.com/</loc>
     <lastmod>2014-09-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://datacenterjourney.github.io/about/</loc>
+    <loc>https://datacenterjourney.com/posts/</loc>
+    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://datacenterjourney.com/about/</loc>
     <lastmod>2014-04-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://datacenterjourney.github.io/posts/2014/04/hugo-template-primer/</loc>
+    <loc>https://datacenterjourney.com/posts/2014/04/hugo-template-primer/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://datacenterjourney.github.io/posts/2014/04/d%C3%A9buter-avec-hugo/</loc>
+    <loc>https://datacenterjourney.com/posts/2014/04/d%C3%A9buter-avec-hugo/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://datacenterjourney.github.io/posts/2014/04/getting-started-with-hugo/</loc>
+    <loc>https://datacenterjourney.com/posts/2014/04/getting-started-with-hugo/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://datacenterjourney.github.io/posts/2014/04/introduction-aux-mod%C3%A8les-hugo/</loc>
+    <loc>https://datacenterjourney.com/posts/2014/04/introduction-aux-mod%C3%A8les-hugo/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://datacenterjourney.github.io/tags/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://datacenterjourney.github.io/tags/development/</loc>
+    <loc>https://datacenterjourney.com/tags/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://datacenterjourney.github.io/tags/go/</loc>
+    <loc>https://datacenterjourney.com/tags/development/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://datacenterjourney.github.io/tags/golang/</loc>
+    <loc>https://datacenterjourney.com/tags/go/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://datacenterjourney.github.io/tags/hugo/</loc>
+    <loc>https://datacenterjourney.com/tags/golang/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://datacenterjourney.github.io/tags/templates/</loc>
+    <loc>https://datacenterjourney.com/tags/hugo/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://datacenterjourney.github.io/tags/themes/</loc>
+    <loc>https://datacenterjourney.com/tags/templates/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://datacenterjourney.github.io/posts/2014/03/migrer-vers-hugo-depuis-jekyll/</loc>
+    <loc>https://datacenterjourney.com/tags/themes/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://datacenterjourney.com/posts/2014/03/migrer-vers-hugo-depuis-jekyll/</loc>
     <lastmod>2014-03-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://datacenterjourney.github.io/index.html</loc>
+    <loc>https://datacenterjourney.com/index.html</loc>
     <priority>0</priority>
   </url>
   
