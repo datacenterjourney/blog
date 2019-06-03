@@ -6,9 +6,19 @@
     <description>Recent content in Categories on Datacenter Journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <lastBuildDate>Sun, 02 Jun 2019 22:34:56 -0700</lastBuildDate>
     
 	<atom:link href="https://datacenterjourney.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title></title>
+      <link>https://datacenterjourney.com/categories/</link>
+      <pubDate>Sun, 02 Jun 2019 22:34:56 -0700</pubDate>
+      
+      <guid>https://datacenterjourney.com/categories/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
