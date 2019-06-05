@@ -67,8 +67,8 @@ publishDir = "public"
 
 [params.social]
     #GitHub = "xxxx"
-    Linkedin = "https://www.linkedin.com/in/manuelmartinez-it/"
-    Twitter = "https://twitter.com/ManuelM_IT"
+    Linkedin = "manuelmartinez-it"
+    Twitter = "ManuelM_IT"
     #Instagram = "xxxx"
     #Email   = "xxxx"
     #Facebook = "xxxx"
