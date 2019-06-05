@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Datacenter Journey</title>
-    <link>https://datacenterjourney.com/posts/</link>
-    <description>Recent content in Posts on Datacenter Journey</description>
+    <title>Life Lessons on Datacenter Journey</title>
+    <link>https://datacenterjourney.com/categories/life-lessons/</link>
+    <description>Recent content in Life Lessons on Datacenter Journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 04 Jun 2019 17:14:24 -0700</lastBuildDate>
     
-	<atom:link href="https://datacenterjourney.com/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://datacenterjourney.com/categories/life-lessons/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>https://datacenterjourney.com/2019/journeystart/</guid>
       <description>To give you a little bit of background on me and how I got started in my IT career back in 2002. As a recent college graduate with little to no experience and only armed with a bachelor degree in Management Information Systems, I thought the job offers were going to be plentiful for me to choose from just by applying. Little did I know that it was not as easy as listing the fact that I had a piece a paper showing that I could learn and pass tests.</description>
-    </item>
-    
-    <item>
-      <title>Placeholder</title>
-      <link>https://datacenterjourney.com/2019/placeholder/</link>
-      <pubDate>Sun, 02 Jun 2019 22:34:56 -0700</pubDate>
-      
-      <guid>https://datacenterjourney.com/2019/placeholder/</guid>
-      <description>Temporary Post This is just a placeholder post until I complete writing my first actual post so stay tuned</description>
     </item>
     
   </channel>
