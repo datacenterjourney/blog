@@ -10,7 +10,8 @@ author: "Manuel Martinez"
 
 Recently I needed to install hundreds of ESXi hosts on USB sticks and wanted to accomplish this in the easiest way possible. While installing ESXi isn't complicated, it can be time-consuming and would require the need to be swapping the monitor and keyboard continually. I wanted an unattended install method where I wouldn't need to continue to touch each machine  and configure it. The plan was to start the install, walk away, and then come back to it after the installation was complete. Below are the steps I used on MacOS to be able to accomplish this task. I am creating another post with how I was able to script the USB creation process to make it even easier and faster.
 
-
+<br>
+<br>
 
 Below are the steps to accomplish this using MacOS broken down into two different parts:
 
@@ -73,16 +74,19 @@ vi /Volumes/ESXI-6-7-U2/BOOT.CFG
 nano /Volumes/ESXI-6-7-U2/EFI/BOOT/BOOT.CFG
 ```
 17. Find the line that starts with _kernelopt_ and delete everything after the equal sign. Then we will add the information in bold below to state that we want to load a kickstart script and list the location and name of the file:
-* kernelopt=**ks=usb:/ks.cfg**
+* kernelopt=**ks=usb:/ks.cfg**  
 
 
-_Editing the kickstart file to configure the ESXi host:_
-1. Download the attached **ks.cfg** file from my GitHub account to use and edit:
-* [ks.cfg](https://www.github.com/datacenterjourney/ "download ks.cfg file")
-2. Using a text editor (not Word) you will need to edit lines 12 & 21
-* Line 12 you will change the default password of **VMware1!** 
+_Editing the kickstart file to configure the ESXi host:_  
+---
+
+1. Download the attached **ks.cfg** file from my GitHub account to use and edit:  
+* [ks.cfg](https://www.github.com/datacenterjourney/ "download ks.cfg file")  
+2. Using a text editor (not Word) you will need to edit lines 12 & 21  
+* Line 12 you will change the default password of **VMware1!**  
 * Line 21 you will change the information after the equal sign of the following **hostname=**, **vlanid=**, **gateway=** and **nameserver=** as needed
 3. Save the file and then copy to the root of the USB flash drive you created as the install drive
 
+---
 
 You now have a fully configured unattended USB ESXi installation drive. All that is left to do is plug in the USB drive to the hardware you want to configure and power it on. I hope this helps you and ultimately saves you time when having to install ESXi on multiple hosts.
