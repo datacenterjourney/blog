@@ -1,8 +1,8 @@
 ---
 title: "Unattended USB ESXi Install - Manual"
-date: 2019-07-1T18:21:58-07:00
+date: 2019-06-11T18:21:58-07:00
 draft: false
-description: ["Steps for manually creating an unattended usb ESXi installer"]
+description: ["Steps for creating an unattended usb ESXi installer"]
 categories: ["ESXi","Automation"]
 featured_image:
 author: "Manuel Martinez"
@@ -77,8 +77,8 @@ nano /Volumes/ESXI-6-7-U2/EFI/BOOT/BOOT.CFG
 
 
 _Editing the kickstart file to configure the ESXi host:_
-1. Download the attached **ks.cfg** file from my GitHub account to use and edit:
-* [ks.cfg](https://www.github.com/datacenterjourney/ "download ks.cfg file")
+1. Download the attached **ks.cfg** file from my GitHub account to use and edit
+[ks.cfg](https://www.github.com/datacenterjourney/ "download ks.cfg file")
 2. Using a text editor (not Word) you will need to edit lines 12 & 21
 * Line 12 you will change the default password of **VMware1!** 
 * Line 21 you will change the information after the equal sign of the following **hostname=**, **vlanid=**, **gateway=** and **nameserver=** as needed
