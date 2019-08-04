@@ -19,114 +19,100 @@
 &lt;p&gt;Recently I came across the need to install hundreds of ESXi hosts on USB sticks and wanted to accomplish this in the easiest way possible. While installing ESXi isn&amp;rsquo;t complicated, it can be time-consuming and would require the need to be swapping the monitor and keyboard continually or having multiple monitors and keyboards. I wanted an unattended install method where I wouldn&amp;rsquo;t need to continue to touch each machine and have to go back configure it. I was not only able to accomplish this task, but also have the installer install ESXi on itself to minimize the number of USB drives needed. The plan was to start the install, walk away, and then come back to it after the installation was complete. Below are the steps I used on MacOS to be able to accomplish this task. Look for my next post where I script the USB creation process to make it even easier and faster.&lt;/p&gt;
 
 &lt;p&gt;Below are the manual steps to accomplish this using MacOS broken down into two different parts:
-&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;br&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;creating-bootable-usb-esxi-installer-on-mac-to-install-on-itself&#34;&gt;Creating bootable USB ESXi Installer on Mac to install on itself&lt;/h3&gt;
 
 &lt;hr /&gt;
 
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Mount the required ESXi installer ISO by double-clicking it or running the command in Terminal:&lt;/p&gt;
+&lt;p&gt;Mount the required ESXi installer ISO by double-clicking it or running the command in Terminal:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;hdiutil mount /path/to/ESXi.iso 
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;hdiutil mount /path/to/ESXi.iso
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Insert the USB flash drive where you want ESXi installed and start up &lt;strong&gt;&lt;em&gt;Disk Utility&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;Insert the USB flash drive where you want ESXi installed and start up &lt;strong&gt;&lt;em&gt;Disk Utility&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;li&gt;&lt;p&gt;Select the USB flash drive so that we can erase it and format it with the following options:&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;Select the USB flash drive so that we can erase it and format it with the following options:&lt;/p&gt;
 
-&lt;li&gt;&lt;p&gt;Format: &lt;strong&gt;MS-DOS (FAT)&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt;Format: &lt;strong&gt;MS-DOS (FAT)&lt;/strong&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Scheme: &lt;strong&gt;Master Boot Record&lt;/strong&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Name: (example) &lt;strong&gt;ESXI-6-7-U2&lt;/strong&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;li&gt;&lt;p&gt;Scheme: &lt;strong&gt;Master Boot Record&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;After erasing the drive, we need to mark the partition as &lt;em&gt;active&lt;/em&gt;. Disk Utility does not support marking partitions as active so we need to use Terminal.&lt;/p&gt;
 
-&lt;li&gt;&lt;p&gt;Name: (example) &lt;strong&gt;ESXI-6-7-U2&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;After erasing the drive, we need to mark the partition as &lt;em&gt;active&lt;/em&gt;. Disk Utility does not support marking partitions as active so we need to use Terminal.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;List all the mounted volumes to determine the identifier for the USB flash drive you inserted.&lt;/p&gt;
+&lt;p&gt;List all the mounted volumes to determine the identifier for the USB flash drive you inserted.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;diskutil list
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;li&gt;&lt;p&gt;Locate the disk identifier which should be something similar to &lt;em&gt;/dev/disk3s1&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;Locate the disk identifier which should be something similar to &lt;em&gt;/dev/disk3s1&lt;/em&gt;.&lt;/p&gt;
 
-&lt;li&gt;&lt;p&gt;Now to unmount the USB flash drive, note this is not the same as eject. Make sure to replace &lt;em&gt;X&lt;/em&gt; and &lt;em&gt;Y&lt;/em&gt; with the proper numbers obtained from the previous command:&lt;/p&gt;
+&lt;p&gt;Now to unmount the USB flash drive, note this is not the same as eject. Make sure to replace &lt;em&gt;X&lt;/em&gt; and &lt;em&gt;Y&lt;/em&gt; with the proper numbers obtained from the previous command:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;diskutil unmount /dev/diskXsY
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;ol&gt;
-&lt;li&gt;Start up the command-line partitioner &lt;em&gt;fdisk&lt;/em&gt; in interactive mode which will require administrator privileges on the drive you identified in the previous commands:
-&lt;code&gt;bash
-sudo fdisk -e /dev/diskXsY
-&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
+&lt;p&gt;Start up the command-line partitioner &lt;em&gt;fdisk&lt;/em&gt; in interactive mode which will require administrator privileges on the drive you identified in the previous commands:&lt;/p&gt;
 
-&lt;li&gt;&lt;p&gt;Once in fdisk, you flag the first partition on the volume as active and bootable:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo fdisk -e /dev/diskXsY
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once in fdisk, you flag the first partition on the volume as active and bootable:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;f 1
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;ol&gt;
-&lt;li&gt;Next, you write the changes:
-&lt;code&gt;bash
-write
-&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
+&lt;p&gt;Next, you write the changes:&lt;/p&gt;
 
-&lt;li&gt;&lt;p&gt;Finally, you exit fdisk interactive mode:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;write
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Finally, you exit fdisk interactive mode:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;quit
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;ol&gt;
-&lt;li&gt;Now to remount the USB flash drive using the diskutil command:
-&lt;code&gt;bash
-disktuil mount /dev/diskXsY
-&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
+&lt;p&gt;Now to remount the USB flash drive using the diskutil command:&lt;/p&gt;
 
-&lt;li&gt;&lt;p&gt;Now you will list the volumes of the mounted ESXi installer ISO and the USB flash drive you just formatted:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;disktuil mount /dev/diskXsY
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now you will list the volumes of the mounted ESXi installer ISO and the USB flash drive you just formatted:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ls /Volumes/
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;ol&gt;
-&lt;li&gt;Copy the entire contents of the ESXi ISO to the root of the USB flash drive either through Finder or terminal using the the command below:&lt;br /&gt;
-&lt;code&gt;bash
-cp -R /Volumes/ESXI-6.7.0-20190504001-STANDARD/* /ESXI-6-7-U2/
-&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
+&lt;p&gt;Copy the entire contents of the ESXi ISO to the root of the USB flash drive either through Finder or terminal using the the command below:&lt;/p&gt;
 
-&lt;li&gt;&lt;p&gt;On the USB flash drive rename the file ISOLINUX.CFG to SYSLINUX.CFG:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cp -R /Volumes/ESXI-6.7.0-20190504001-STANDARD/* /ESXI-6-7-U2/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;On the USB flash drive rename the file ISOLINUX.CFG to SYSLINUX.CFG:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mv /Volumes/ESXI-6-7-U2/ISOLINUX.CFG /Volumes/ESXI-6-7-U2/SYSLINUX.CFG
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;ol&gt;
-&lt;li&gt;Now in order to have the flash drive boot automatically to the kickstart file that will be placed on the root of the install USB flash drive we need to edit the two BOOT.CFG files in the following locations using vi or nano:
-&lt;code&gt;bash
-vi /Volumes/ESXI-6-7-U2/BOOT.CFG
+&lt;p&gt;Now in order to have the flash drive boot automatically to the kickstart file that will be placed on the root of the install USB flash drive we need to edit the two BOOT.CFG files in the following locations using vi or nano:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;vi /Volumes/ESXI-6-7-U2/BOOT.CFG
 nano /Volumes/ESXI-6-7-U2/EFI/BOOT/BOOT.CFG
-&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;li&gt;&lt;p&gt;Find the line that starts with &lt;em&gt;kernelopt&lt;/em&gt; and delete everything after the equal sign. Then we will add the information in bold below to state that we want to load a kickstart script and list the location and name of the file:&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;Find the line that starts with &lt;em&gt;kernelopt&lt;/em&gt; and delete everything after the equal sign. Then we will add the information in bold below to state that we want to load a kickstart script and list the location and name of the file:&lt;/p&gt;
 
-&lt;li&gt;&lt;p&gt;kernelopt=&lt;strong&gt;ks=usb:/ks.cfg&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;hr /&gt;
+&lt;ul&gt;
+&lt;li&gt;kernelopt=&lt;strong&gt;ks=usb:/ks.cfg&lt;/strong&gt;&lt;br /&gt;
+&lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h3 id=&#34;editing-the-kickstart-file-to-configure-the-esxi-host&#34;&gt;&lt;em&gt;Editing the kickstart file to configure the ESXi host:&lt;/em&gt;&lt;/h3&gt;
 
 &lt;hr /&gt;
 
-&lt;ol&gt;
-&lt;li&gt;Download the attached &lt;strong&gt;ks.cfg&lt;/strong&gt; file from my GitHub account to use and edit:&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/datacenterjourney/kickstart_files/blob/master/ks.cfg&#34; title=&#34;download ks.cfg file&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;ks.cfg&lt;/a&gt;&lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt;Download the attached &lt;strong&gt;ks.cfg&lt;/strong&gt; file from my GitHub account to use and edit: &lt;a href=&#34;https://github.com/datacenterjourney/kickstart_files/blob/master/ks.cfg&#34; title=&#34;download ks.cfg file&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;ks.cfg&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Using a text editor (not Word) you will need to edit lines 12, 21, 30, 31, 40, and 43&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;Line 12 you will set the &amp;lsquo;root&amp;rsquo; password by replacing &lt;strong&gt;&lt;em&gt;{PASSWD}&lt;/em&gt;&lt;/strong&gt;.&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;Line 21 you will change the information after the equal sign of the following &lt;strong&gt;device=&lt;em&gt;{NIC1}&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;hostname=&lt;em&gt;{HOSTNAME}&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;vlanid=&lt;em&gt;{VLANID}&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;ip=&lt;em&gt;{IPADDR}&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;netmask=&lt;em&gt;{SUBNET}&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;gateway=&lt;em&gt;{GATEWAY}&lt;/em&gt;&lt;/strong&gt;, and &lt;strong&gt;nameserver=&lt;em&gt;{DNS1},{DNS2}&lt;/em&gt;&lt;/strong&gt; as needed.&lt;/li&gt;
@@ -135,11 +121,9 @@ nano /Volumes/ESXI-6-7-U2/EFI/BOOT/BOOT.CFG
 &lt;li&gt;Line 40 you will again replace &lt;strong&gt;&lt;em&gt;{HOSTNAME}&lt;/em&gt;&lt;/strong&gt; with the same name you used in line 21.&lt;/li&gt;
 &lt;li&gt;Line 43 you will replace the information after the equal sign &lt;strong&gt;uplink-name=&lt;em&gt;{NIC2}&lt;/em&gt;&lt;/strong&gt; if you want to set a second management nic. If you only have one nic or don&amp;rsquo;t want assign a second network adater then you can comment out the line by placing a &amp;ldquo;&lt;strong&gt;#&lt;/strong&gt;&amp;rdquo; at the beginning of the line.&lt;/li&gt;
 &lt;li&gt;Save the file and then copy to the root of the USB flash drive you created as the install drive&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;br&gt;
+&lt;p&gt;&lt;br&gt;
 You now have a fully configured unattended USB ESXi installation drive. All that is left to do is plug in the USB drive to the hardware you want to configure and power it on. I hope this helps you and ultimately saves you time when having to install ESXi on multiple hosts.&lt;/p&gt;
 </description>
     </item>

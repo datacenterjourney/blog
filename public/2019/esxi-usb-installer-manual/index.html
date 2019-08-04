@@ -55,7 +55,7 @@
   },
   "genre": "posts",
   
-  "wordcount":  841 ,
+  "wordcount":  836 ,
   "url": "https:\/\/datacenterjourney.com\/2019\/esxi-usb-installer-manual\/",
   "datePublished": "2019-07-28T05:06:05-07:00",
   "dateModified": "2019-07-28T05:06:05-07:00",
@@ -170,114 +170,100 @@
 <p>Recently I came across the need to install hundreds of ESXi hosts on USB sticks and wanted to accomplish this in the easiest way possible. While installing ESXi isn&rsquo;t complicated, it can be time-consuming and would require the need to be swapping the monitor and keyboard continually or having multiple monitors and keyboards. I wanted an unattended install method where I wouldn&rsquo;t need to continue to touch each machine and have to go back configure it. I was not only able to accomplish this task, but also have the installer install ESXi on itself to minimize the number of USB drives needed. The plan was to start the install, walk away, and then come back to it after the installation was complete. Below are the steps I used on MacOS to be able to accomplish this task. Look for my next post where I script the USB creation process to make it even easier and faster.</p>
 
 <p>Below are the manual steps to accomplish this using MacOS broken down into two different parts:
-<br><br></p>
+<br></p>
 
 <h3 id="creating-bootable-usb-esxi-installer-on-mac-to-install-on-itself">Creating bootable USB ESXi Installer on Mac to install on itself</h3>
 
 <hr />
 
-<ol>
-<li><p>Mount the required ESXi installer ISO by double-clicking it or running the command in Terminal:</p>
+<p>Mount the required ESXi installer ISO by double-clicking it or running the command in Terminal:</p>
 
-<pre><code class="language-bash">hdiutil mount /path/to/ESXi.iso 
+<pre><code class="language-bash">hdiutil mount /path/to/ESXi.iso
 </code></pre>
 
-<ol>
-<li><p>Insert the USB flash drive where you want ESXi installed and start up <strong><em>Disk Utility</em></strong></p></li>
+<p>Insert the USB flash drive where you want ESXi installed and start up <strong><em>Disk Utility</em></strong>.</p>
 
-<li><p>Select the USB flash drive so that we can erase it and format it with the following options:</p></li>
+<p>Select the USB flash drive so that we can erase it and format it with the following options:</p>
 
-<li><p>Format: <strong>MS-DOS (FAT)</strong></p></li>
+<ul>
+<li>Format: <strong>MS-DOS (FAT)</strong><br /></li>
+<li>Scheme: <strong>Master Boot Record</strong><br /></li>
+<li>Name: (example) <strong>ESXI-6-7-U2</strong><br /></li>
+</ul>
 
-<li><p>Scheme: <strong>Master Boot Record</strong></p></li>
+<p>After erasing the drive, we need to mark the partition as <em>active</em>. Disk Utility does not support marking partitions as active so we need to use Terminal.</p>
 
-<li><p>Name: (example) <strong>ESXI-6-7-U2</strong></p></li>
-
-<li><p>After erasing the drive, we need to mark the partition as <em>active</em>. Disk Utility does not support marking partitions as active so we need to use Terminal.</p></li>
-
-<li><p>List all the mounted volumes to determine the identifier for the USB flash drive you inserted.</p>
+<p>List all the mounted volumes to determine the identifier for the USB flash drive you inserted.</p>
 
 <pre><code class="language-bash">diskutil list
-</code></pre></li>
-</ol></li>
+</code></pre>
 
-<li><p>Locate the disk identifier which should be something similar to <em>/dev/disk3s1</em></p></li>
+<p>Locate the disk identifier which should be something similar to <em>/dev/disk3s1</em>.</p>
 
-<li><p>Now to unmount the USB flash drive, note this is not the same as eject. Make sure to replace <em>X</em> and <em>Y</em> with the proper numbers obtained from the previous command:</p>
+<p>Now to unmount the USB flash drive, note this is not the same as eject. Make sure to replace <em>X</em> and <em>Y</em> with the proper numbers obtained from the previous command:</p>
 
 <pre><code class="language-bash">diskutil unmount /dev/diskXsY
 </code></pre>
 
-<ol>
-<li>Start up the command-line partitioner <em>fdisk</em> in interactive mode which will require administrator privileges on the drive you identified in the previous commands:
-<code>bash
-sudo fdisk -e /dev/diskXsY
-</code></li>
-</ol></li>
+<p>Start up the command-line partitioner <em>fdisk</em> in interactive mode which will require administrator privileges on the drive you identified in the previous commands:</p>
 
-<li><p>Once in fdisk, you flag the first partition on the volume as active and bootable:</p>
+<pre><code class="language-bash">sudo fdisk -e /dev/diskXsY
+</code></pre>
+
+<p>Once in fdisk, you flag the first partition on the volume as active and bootable:</p>
 
 <pre><code class="language-bash">f 1
 </code></pre>
 
-<ol>
-<li>Next, you write the changes:
-<code>bash
-write
-</code></li>
-</ol></li>
+<p>Next, you write the changes:</p>
 
-<li><p>Finally, you exit fdisk interactive mode:</p>
+<pre><code class="language-bash">write
+</code></pre>
+
+<p>Finally, you exit fdisk interactive mode:</p>
 
 <pre><code class="language-bash">quit
 </code></pre>
 
-<ol>
-<li>Now to remount the USB flash drive using the diskutil command:
-<code>bash
-disktuil mount /dev/diskXsY
-</code></li>
-</ol></li>
+<p>Now to remount the USB flash drive using the diskutil command:</p>
 
-<li><p>Now you will list the volumes of the mounted ESXi installer ISO and the USB flash drive you just formatted:</p>
+<pre><code class="language-bash">disktuil mount /dev/diskXsY
+</code></pre>
+
+<p>Now you will list the volumes of the mounted ESXi installer ISO and the USB flash drive you just formatted:</p>
 
 <pre><code class="language-bash">ls /Volumes/
 </code></pre>
 
-<ol>
-<li>Copy the entire contents of the ESXi ISO to the root of the USB flash drive either through Finder or terminal using the the command below:<br />
-<code>bash
-cp -R /Volumes/ESXI-6.7.0-20190504001-STANDARD/* /ESXI-6-7-U2/
-</code></li>
-</ol></li>
+<p>Copy the entire contents of the ESXi ISO to the root of the USB flash drive either through Finder or terminal using the the command below:</p>
 
-<li><p>On the USB flash drive rename the file ISOLINUX.CFG to SYSLINUX.CFG:</p>
+<pre><code class="language-bash">cp -R /Volumes/ESXI-6.7.0-20190504001-STANDARD/* /ESXI-6-7-U2/
+</code></pre>
+
+<p>On the USB flash drive rename the file ISOLINUX.CFG to SYSLINUX.CFG:</p>
 
 <pre><code class="language-bash">mv /Volumes/ESXI-6-7-U2/ISOLINUX.CFG /Volumes/ESXI-6-7-U2/SYSLINUX.CFG
 </code></pre>
 
-<ol>
-<li>Now in order to have the flash drive boot automatically to the kickstart file that will be placed on the root of the install USB flash drive we need to edit the two BOOT.CFG files in the following locations using vi or nano:
-<code>bash
-vi /Volumes/ESXI-6-7-U2/BOOT.CFG
+<p>Now in order to have the flash drive boot automatically to the kickstart file that will be placed on the root of the install USB flash drive we need to edit the two BOOT.CFG files in the following locations using vi or nano:</p>
+
+<pre><code class="language-bash">vi /Volumes/ESXI-6-7-U2/BOOT.CFG
 nano /Volumes/ESXI-6-7-U2/EFI/BOOT/BOOT.CFG
-</code></li>
-</ol></li>
+</code></pre>
 
-<li><p>Find the line that starts with <em>kernelopt</em> and delete everything after the equal sign. Then we will add the information in bold below to state that we want to load a kickstart script and list the location and name of the file:</p></li>
+<p>Find the line that starts with <em>kernelopt</em> and delete everything after the equal sign. Then we will add the information in bold below to state that we want to load a kickstart script and list the location and name of the file:</p>
 
-<li><p>kernelopt=<strong>ks=usb:/ks.cfg</strong></p></li>
-</ol>
-
-<hr />
+<ul>
+<li>kernelopt=<strong>ks=usb:/ks.cfg</strong><br />
+<br></li>
+</ul>
 
 <h3 id="editing-the-kickstart-file-to-configure-the-esxi-host"><em>Editing the kickstart file to configure the ESXi host:</em></h3>
 
 <hr />
 
-<ol>
-<li>Download the attached <strong>ks.cfg</strong> file from my GitHub account to use and edit:</li>
-<li><a href="https://github.com/datacenterjourney/kickstart_files/blob/master/ks.cfg" title="download ks.cfg file" rel="nofollow noreferrer" target="_blank">ks.cfg</a></li>
+<ul>
+<li>Download the attached <strong>ks.cfg</strong> file from my GitHub account to use and edit: <a href="https://github.com/datacenterjourney/kickstart_files/blob/master/ks.cfg" title="download ks.cfg file" rel="nofollow noreferrer" target="_blank">ks.cfg</a></li>
 <li>Using a text editor (not Word) you will need to edit lines 12, 21, 30, 31, 40, and 43<br /></li>
 <li>Line 12 you will set the &lsquo;root&rsquo; password by replacing <strong><em>{PASSWD}</em></strong>.<br /></li>
 <li>Line 21 you will change the information after the equal sign of the following <strong>device=<em>{NIC1}</em></strong>, <strong>hostname=<em>{HOSTNAME}</em></strong>, <strong>vlanid=<em>{VLANID}</em></strong>, <strong>ip=<em>{IPADDR}</em></strong>, <strong>netmask=<em>{SUBNET}</em></strong>, <strong>gateway=<em>{GATEWAY}</em></strong>, and <strong>nameserver=<em>{DNS1},{DNS2}</em></strong> as needed.</li>
@@ -286,11 +272,9 @@ nano /Volumes/ESXI-6-7-U2/EFI/BOOT/BOOT.CFG
 <li>Line 40 you will again replace <strong><em>{HOSTNAME}</em></strong> with the same name you used in line 21.</li>
 <li>Line 43 you will replace the information after the equal sign <strong>uplink-name=<em>{NIC2}</em></strong> if you want to set a second management nic. If you only have one nic or don&rsquo;t want assign a second network adater then you can comment out the line by placing a &ldquo;<strong>#</strong>&rdquo; at the beginning of the line.</li>
 <li>Save the file and then copy to the root of the USB flash drive you created as the install drive</li>
-</ol>
+</ul>
 
-<hr />
-
-<p><br><br>
+<p><br>
 You now have a fully configured unattended USB ESXi installation drive. All that is left to do is plug in the USB drive to the hardware you want to configure and power it on. I hope this helps you and ultimately saves you time when having to install ESXi on multiple hosts.</p>
 
     </div>
@@ -305,7 +289,7 @@ You now have a fully configured unattended USB ESXi installation drive. All that
            
             <p class="copyright-item">
                     <span>Words:</span>
-                   <span>841</span>
+                   <span>836</span>
             </p>
             
             <p class="copyright-item">
