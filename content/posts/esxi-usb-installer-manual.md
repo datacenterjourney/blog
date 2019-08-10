@@ -107,7 +107,7 @@ Find the line that starts with _kernelopt_ and delete everything after the equal
 
 ---
 
-+ Download the attached **ks.cfg** file from my GitHub account to use and edit: [ks.cfg](https://github.com/datacenterjourney/kickstart_files/blob/master/ks.cfg "download ks.cfg file")
++ Download the attached **ks.cfg** file from my GitHub account to use and edit: [ks.cfg](https://github.com/datacenterjourney/miscellaneous_files/blob/master/ks.cfg "download ks.cfg file")
 + Using a text editor (not Word) you will need to edit lines 12, 21, 30, 31, 40, and 43  
 + Line 12 you will set the 'root' password by replacing **_{PASSWD}_**.  
 + Line 21 you will change the information after the equal sign of the following **device=_{NIC1}_**, **hostname=_{HOSTNAME}_**, **vlanid=_{VLANID}_**, **ip=_{IPADDR}_**, **netmask=_{SUBNET}_**, **gateway=_{GATEWAY}_**, and **nameserver=_{DNS1},{DNS2}_** as needed.

@@ -112,7 +112,7 @@ nano /Volumes/ESXI-6-7-U2/EFI/BOOT/BOOT.CFG
 &lt;hr /&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Download the attached &lt;strong&gt;ks.cfg&lt;/strong&gt; file from my GitHub account to use and edit: &lt;a href=&#34;https://github.com/datacenterjourney/kickstart_files/blob/master/ks.cfg&#34; title=&#34;download ks.cfg file&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;ks.cfg&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Download the attached &lt;strong&gt;ks.cfg&lt;/strong&gt; file from my GitHub account to use and edit: &lt;a href=&#34;https://github.com/datacenterjourney/miscellaneous_files/blob/master/ks.cfg&#34; title=&#34;download ks.cfg file&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;ks.cfg&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Using a text editor (not Word) you will need to edit lines 12, 21, 30, 31, 40, and 43&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;Line 12 you will set the &amp;lsquo;root&amp;rsquo; password by replacing &lt;strong&gt;&lt;em&gt;{PASSWD}&lt;/em&gt;&lt;/strong&gt;.&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;Line 21 you will change the information after the equal sign of the following &lt;strong&gt;device=&lt;em&gt;{NIC1}&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;hostname=&lt;em&gt;{HOSTNAME}&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;vlanid=&lt;em&gt;{VLANID}&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;ip=&lt;em&gt;{IPADDR}&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;netmask=&lt;em&gt;{SUBNET}&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;gateway=&lt;em&gt;{GATEWAY}&lt;/em&gt;&lt;/strong&gt;, and &lt;strong&gt;nameserver=&lt;em&gt;{DNS1},{DNS2}&lt;/em&gt;&lt;/strong&gt; as needed.&lt;/li&gt;
