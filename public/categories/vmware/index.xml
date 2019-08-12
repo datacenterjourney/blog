@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>MacOS on Datacenter Journey</title>
-    <link>https://datacenterjourney.com/categories/macos/</link>
-    <description>Recent content in MacOS on Datacenter Journey</description>
+    <title>VMware on Datacenter Journey</title>
+    <link>https://datacenterjourney.com/categories/vmware/</link>
+    <description>Recent content in VMware on Datacenter Journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 12 Aug 2019 05:52:43 -0700</lastBuildDate>
     
-	<atom:link href="https://datacenterjourney.com/categories/macos/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://datacenterjourney.com/categories/vmware/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>https://datacenterjourney.com/2019/esxi-usb-installer-scripted-single/</guid>
       <description>In one of my previous posts, I shared the steps to manually configure a USB drive to create an unattended ESXi installation and have it install on itself. The process is not complicated and makes the installation of ESXi much quicker and zero-touch. The manual process of creating USB drives wasn&amp;rsquo;t bad, but it wasn&amp;rsquo;t very efficient and did not scale well. To be able to generate more than a few at a time turned out to be time-consuming.</description>
-    </item>
-    
-    <item>
-      <title>ESXi USB Installer - Manual</title>
-      <link>https://datacenterjourney.com/2019/esxi-usb-installer-manual/</link>
-      <pubDate>Sun, 28 Jul 2019 05:06:05 -0700</pubDate>
-      
-      <guid>https://datacenterjourney.com/2019/esxi-usb-installer-manual/</guid>
-      <description>Recently I came across the need to install hundreds of ESXi hosts on USB sticks and wanted to accomplish this in the easiest way possible. While installing ESXi isn&amp;rsquo;t complicated, it can be time-consuming and would require the need to be swapping the monitor and keyboard continually or having multiple monitors and keyboards. I wanted an unattended install method where I wouldn&amp;rsquo;t need to continue to touch each machine and have to go back configure it.</description>
     </item>
     
   </channel>
