@@ -1,5 +1,5 @@
 ---
-title: "Esxi Usb Installer Scripted - Single"
+title: "ESXi USB Installer Scripted - Single"
 date: 2019-08-12T05:52:43-07:00
 draft: false
 description: ["PowerShell module for creating a single unattended USB ESXi installer"]
