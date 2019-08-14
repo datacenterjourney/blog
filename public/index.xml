@@ -20,7 +20,7 @@
 &lt;br&gt;
 Over the years, I have become more comfortable and proficient at using PowerShell for scripting tasks. The fact that is is now cross-platform with the release of PowerShell Core makes it my go-to scripting language. One of the great things about PowerShell is that while you are in the shell, you are still able to run native bash or dos commands. I then took the commands for creating the ESXi unattended USB installer and wrapped them in a module that I could share. When I set out to create this, I wanted it to be as simple as possible and make sure that I took care of all the error checking. I will break down the two of the functions that the module exports so that you can understand it and modify for your needs if necessary. Keep in mind that the module is by no means perfect, and there are still many improvements that can be made to make it even better.&lt;br /&gt;
 &lt;br&gt;
-&lt;strong&gt;Note this module will only run on macOS.&lt;/strong&gt;&lt;/p&gt;
+&lt;strong&gt;Note this module will only run on macOS and requires PowerShell to be run with &amp;ldquo;sudo&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;reset-esxusb&#34;&gt;Reset-EsxUsb&lt;/h3&gt;
 

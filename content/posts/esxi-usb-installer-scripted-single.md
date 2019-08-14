@@ -12,7 +12,7 @@ In one of my previous posts, I shared the steps to manually configure a USB driv
 <br>
 Over the years, I have become more comfortable and proficient at using PowerShell for scripting tasks. The fact that is is now cross-platform with the release of PowerShell Core makes it my go-to scripting language. One of the great things about PowerShell is that while you are in the shell, you are still able to run native bash or dos commands. I then took the commands for creating the ESXi unattended USB installer and wrapped them in a module that I could share. When I set out to create this, I wanted it to be as simple as possible and make sure that I took care of all the error checking. I will break down the two of the functions that the module exports so that you can understand it and modify for your needs if necessary. Keep in mind that the module is by no means perfect, and there are still many improvements that can be made to make it even better.  
 <br>
-**Note this module will only run on macOS.**  
+**Note this module will only run on macOS and requires PowerShell to be run with "sudo"**  
 
 ### Reset-EsxUsb  
 This cmdlet looks for connected USB drives and will prompt the user to see if they want to wipe them. If the user chooses not to format the USB drive, it will give a list of all the disk(s) currently mounted using *diskutil*.  Unless the USB drive(s) to use is new SanDisk USB the user will need to format the drive to have the next module work correctly.  
