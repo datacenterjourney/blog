@@ -6,10 +6,28 @@
     <description>Recent content in Categories on Datacenter Journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 12 Aug 2019 05:52:43 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 14 Aug 2019 05:47:41 -0700</lastBuildDate>
     
 	<atom:link href="https://datacenterjourney.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Powershell</title>
+      <link>https://datacenterjourney.com/categories/powershell/</link>
+      <pubDate>Wed, 14 Aug 2019 05:47:41 -0700</pubDate>
+      
+      <guid>https://datacenterjourney.com/categories/powershell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>macOS</title>
+      <link>https://datacenterjourney.com/categories/macos/</link>
+      <pubDate>Wed, 14 Aug 2019 05:47:41 -0700</pubDate>
+      
+      <guid>https://datacenterjourney.com/categories/macos/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Automation</title>
@@ -26,24 +44,6 @@
       <pubDate>Mon, 12 Aug 2019 05:52:43 -0700</pubDate>
       
       <guid>https://datacenterjourney.com/categories/esxi/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>MacOS</title>
-      <link>https://datacenterjourney.com/categories/macos/</link>
-      <pubDate>Mon, 12 Aug 2019 05:52:43 -0700</pubDate>
-      
-      <guid>https://datacenterjourney.com/categories/macos/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Powershell</title>
-      <link>https://datacenterjourney.com/categories/powershell/</link>
-      <pubDate>Mon, 12 Aug 2019 05:52:43 -0700</pubDate>
-      
-      <guid>https://datacenterjourney.com/categories/powershell/</guid>
       <description></description>
     </item>
     

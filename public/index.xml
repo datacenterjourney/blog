@@ -5,8 +5,85 @@
     <description>Recent content in Datacenter Journey on Datacenter Journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 12 Aug 2019 05:52:43 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 14 Aug 2019 05:47:41 -0700</lastBuildDate>
     <atom:link href="https://datacenterjourney.com/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Installing PowerShell Core - MacOS</title>
+      <link>https://datacenterjourney.com/2019/installing-powershell-core-macos/</link>
+      <pubDate>Wed, 14 Aug 2019 05:47:41 -0700</pubDate>
+      
+      <guid>https://datacenterjourney.com/2019/installing-powershell-core-macos/</guid>
+      <description>
+
+&lt;p&gt;A thought occurred to me after my last post that there might be users out there that are new to macOS and PowerShell. So to help everyone out, I imagined it might be useful to explain how to install PowerShell on macOS. The task is two parts comprised of first installing Homebrew and then using Homebrew to install PowerShell.&lt;/p&gt;
+
+&lt;h3 id=&#34;installing-homebrew&#34;&gt;Installing Homebrew&lt;/h3&gt;
+
+&lt;p&gt;Open a terminal window and then run the following command at the prompt:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;/usr/bin/ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The command will output information about what it will be installing and the directories it will create. At this point, you will be prompted to press the &amp;ldquo;RETURN&amp;rdquo; key to continue or any other key to abort the installation like in the screenshot below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://datacenterjourney.com/img/Homebrew1.png&#34; alt=&#34;Homebrew1&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Shortly after you hit the &amp;ldquo;RETURN&amp;rdquo; key, a prompted for the password of the user account that is currently logged in will appear.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://datacenterjourney.com/img/Homebrew2.png&#34; alt=&#34;Homebrew2&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Homebrew will continue to create several directories and start downloading necessary packages to complete the installation like Xcode command-line tools. After some time you should see a message showing &amp;ldquo;&lt;strong&gt;==&amp;gt; Installation successful!&lt;/strong&gt;&amp;rdquo; and you will be back at a command prompt. You have now successfully installed Homebrew and can use it to install and manage many different packages.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://datacenterjourney.com/img/Homebrew3.png&#34; alt=&#34;Homebrew3&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;installing-powershell&#34;&gt;Installing PowerShell&lt;/h3&gt;
+
+&lt;p&gt;Now that you have Homebrew installed we will use it to install the latest stable release of PowerShell for macOS. I have found this to be the easiest and preferred method to install and manage PowerShell on macOS. Keep in mind that PowerShell Core is supported only on macOS 10.12 (Sierra) and higher. The beautiful thing about using this method is that Homebrew will install any required dependencies packaged with the installer. In this case, it also installs OpenSSL.&lt;/p&gt;
+
+&lt;p&gt;At the command prompt, you need to enter the next command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;brew cask install powershell
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;After it has downloaded a few required files, it will prompt for the current user&amp;rsquo;s password. When the installation is complete, you will see a foaming beer mug and the message that &amp;ldquo;powershell was successfully installed!&amp;rdquo; and be returned to a command prompt.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://datacenterjourney.com/img/PowerShell1.png&#34; alt=&#34;PowerShell1&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Finally, verify that your installation is working correctly by running the command to start Powershell. If you want to run PowerShell with elevated privileges, then you will need to run it with the &amp;ldquo;sudo&amp;rdquo; command and enter the logged-on user&amp;rsquo;s password.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;pwsh
+
+sudo pwsh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If PowerShell is working correctly, then you will see output similar to the image below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://datacenterjourney.com/img/PowerShell2.png&#34; alt=&#34;PowerShell2&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;updating-powershell&#34;&gt;Updating PowerShell&lt;/h3&gt;
+
+&lt;p&gt;As new stable versions of PowerShell are released, you can easily update the version you have installed using Homebrew with the commands listed below. First, you update Homebrew&amp;rsquo;s formulae to make sure you have that up to date. You will see output similar to the two images below.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;brew update
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://datacenterjourney.com/img/Homebrew4.png&#34; alt=&#34;Homebrew4&#34; /&gt;
+&lt;img src=&#34;https://datacenterjourney.com/img/Homebrew5.png&#34; alt=&#34;Homebrew5&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once that is complete you can then run the command to upgrade PowerShell.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;brew cask upgrade powershell
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Again you are prompted for the logged in user&amp;rsquo;s password to continue with the installation. Then it will finish the upgrade and you will once again be brought to the command prompt with a message before that &amp;ldquo;&lt;strong&gt;powershell was successfully upgraded!&lt;/strong&gt;&amp;ldquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://datacenterjourney.com/img/PowerShell3.png&#34; alt=&#34;PowerShell3&#34; /&gt;
+&lt;img src=&#34;https://datacenterjourney.com/img/PowerShell4.png&#34; alt=&#34;PowerShell4&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I hope this was informative and helpful to anyone just getting started with PowerShell on macOS.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>ESXi USB Installer Scripted - Single</title>

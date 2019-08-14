@@ -6,10 +6,20 @@
     <description>Recent content in Powershell on Datacenter Journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 12 Aug 2019 05:52:43 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 14 Aug 2019 05:47:41 -0700</lastBuildDate>
     
 	<atom:link href="https://datacenterjourney.com/categories/powershell/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Installing PowerShell Core - MacOS</title>
+      <link>https://datacenterjourney.com/2019/installing-powershell-core-macos/</link>
+      <pubDate>Wed, 14 Aug 2019 05:47:41 -0700</pubDate>
+      
+      <guid>https://datacenterjourney.com/2019/installing-powershell-core-macos/</guid>
+      <description>A thought occurred to me after my last post that there might be users out there that are new to macOS and PowerShell. So to help everyone out, I imagined it might be useful to explain how to install PowerShell on macOS. The task is two parts comprised of first installing Homebrew and then using Homebrew to install PowerShell.
+Installing Homebrew Open a terminal window and then run the following command at the prompt:</description>
+    </item>
     
     <item>
       <title>ESXi USB Installer Scripted - Single</title>
