@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>MacOS on Datacenter Journey</title>
+    <title>macOS on Datacenter Journey</title>
     <link>https://datacenterjourney.com/categories/macos/</link>
-    <description>Recent content in MacOS on Datacenter Journey</description>
+    <description>Recent content in macOS on Datacenter Journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 14 Aug 2019 05:47:41 -0700</lastBuildDate>
