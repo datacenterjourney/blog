@@ -4,7 +4,7 @@
     <url>
       <loc>https://datacenterjourney.com/categories/</loc>
       
-      <lastmod>2019-08-27T10:01:18-07:00</lastmod>
+      <lastmod>2019-09-05T21:10:43-07:00</lastmod>
       
       
       
@@ -16,7 +16,57 @@
     <url>
       <loc>https://datacenterjourney.com/</loc>
       
-      <lastmod>2019-08-27T10:01:18-07:00</lastmod>
+      <lastmod>2019-09-05T21:10:43-07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://datacenterjourney.com/categories/kubernetes/</loc>
+      
+      <lastmod>2019-09-05T21:10:43-07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://datacenterjourney.com/posts/</loc>
+      
+      <lastmod>2019-09-05T21:10:43-07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://datacenterjourney.com/2019/project-pacific-announcement/</loc>
+      
+      <lastmod>2019-09-05T21:10:43-07:00</lastmod>
+      
+      
+      <changefreq>monthly</changefreq>
+      
+      
+      <priority>0.5</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://datacenterjourney.com/categories/vmware/</loc>
+      
+      <lastmod>2019-09-05T21:10:43-07:00</lastmod>
       
       
       
@@ -53,18 +103,6 @@
   
     <url>
       <loc>https://datacenterjourney.com/categories/life-lessons/</loc>
-      
-      <lastmod>2019-08-27T10:01:18-07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://datacenterjourney.com/posts/</loc>
       
       <lastmod>2019-08-27T10:01:18-07:00</lastmod>
       
@@ -147,18 +185,6 @@
       
       
       <priority>0.5</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://datacenterjourney.com/categories/vmware/</loc>
-      
-      <lastmod>2019-08-12T05:52:43-07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
       
       
     </url>
