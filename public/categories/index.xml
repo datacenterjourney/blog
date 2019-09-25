@@ -6,10 +6,19 @@
     <description>Recent content in Categories on Datacenter Journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Sep 2019 21:10:43 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 24 Sep 2019 20:01:03 -0700</lastBuildDate>
     
 	<atom:link href="https://datacenterjourney.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>UCS</title>
+      <link>https://datacenterjourney.com/categories/ucs/</link>
+      <pubDate>Tue, 24 Sep 2019 20:01:03 -0700</pubDate>
+      
+      <guid>https://datacenterjourney.com/categories/ucs/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Kubernetes</title>
@@ -48,20 +57,20 @@
     </item>
     
     <item>
-      <title>MacOS</title>
-      <link>https://datacenterjourney.com/categories/macos/</link>
-      <pubDate>Wed, 14 Aug 2019 05:47:41 -0700</pubDate>
-      
-      <guid>https://datacenterjourney.com/categories/macos/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Powershell</title>
       <link>https://datacenterjourney.com/categories/powershell/</link>
       <pubDate>Wed, 14 Aug 2019 05:47:41 -0700</pubDate>
       
       <guid>https://datacenterjourney.com/categories/powershell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>macOS</title>
+      <link>https://datacenterjourney.com/categories/macos/</link>
+      <pubDate>Wed, 14 Aug 2019 05:47:41 -0700</pubDate>
+      
+      <guid>https://datacenterjourney.com/categories/macos/</guid>
       <description></description>
     </item>
     

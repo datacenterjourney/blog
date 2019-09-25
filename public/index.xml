@@ -5,8 +5,48 @@
     <description>Recent content in Datacenter Journey on Datacenter Journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Sep 2019 21:10:43 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 24 Sep 2019 20:01:03 -0700</lastBuildDate>
     <atom:link href="https://datacenterjourney.com/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Change UCS Fabric Interconnect IPs</title>
+      <link>https://datacenterjourney.com/2019/change-ucs-fi-ips/</link>
+      <pubDate>Tue, 24 Sep 2019 20:01:03 -0700</pubDate>
+      
+      <guid>https://datacenterjourney.com/2019/change-ucs-fi-ips/</guid>
+      <description>
+
+&lt;p&gt;It doesn&amp;rsquo;t often happen that you need to change the Management IP Addresses on Cisco UCS Fabric Interconnects once they are configured and placed into production. If you do have to change them for whatever reason, as I have had to in the past, I thought it would be good to post the process and commands here for reference. Make sure you replace any information located within the &amp;lt; &amp;gt; to the IP information of your Fabric Interconnects. This can all be done non-disruptively to your environment since this will only affect the IPs for management of the Fabric Interconnets and the management IPs of any configured servers.&lt;/p&gt;
+
+&lt;h4 id=&#34;to-change-ip-for-fabric-interconnects-login-to-either-one-via-console&#34;&gt;To change IP for fabric interconnects, login to either one via console:&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;scope fabric-interconnect a
+set out-of-band ip &amp;lt;management IP of FI A&amp;gt; netmask &amp;lt;subnet mask&amp;gt; gw &amp;lt;default gateway&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;repeat-for-the-second-fabric-interconnect&#34;&gt;Repeat for the second fabric interconnect.&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;scope fabric-interconnect b
+set out-of-band ip &amp;lt;management IP of FI B&amp;gt; netmask &amp;lt;subnet mask&amp;gt; gw &amp;lt;default gateway&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;to-change-the-virtual-ip-used-for-system-management-this-should-be-in-the-same-vlan-as-the-individual-fabric-interconnect-ips&#34;&gt;To change the Virtual IP used for system management, this should be in the same VLAN as the individual fabric interconnect IPs:&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;scope system
+set virtual-ip &amp;lt;management IP of cluster&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;finally-check-to-see-that-there-are-no-errors-then-actually-commit-if-everything-checks-out&#34;&gt;Finally check to see that there are no errors, then actually commit if everything checks out:&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;commit-buffer verify-only
+commit-buffer
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br&gt;
+&lt;strong&gt;Attention:&lt;/strong&gt;
+Something to be aware of if you happen to change the management IPs to a different subnet, you must recreate any &amp;ldquo;mgmt-IP&amp;rdquo; pools. The new pools are required because the mgmt-IP pools must reside on the same subnet as the management IPs of the Fabric Interconnects. You accomplish this by deleting the existing ones and creating new ones with the new management IP ranges.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Project Pacific Announcement</title>

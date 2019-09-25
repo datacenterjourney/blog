@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>UCS on Datacenter Journey</title>
+    <link>https://datacenterjourney.com/categories/ucs/</link>
+    <description>Recent content in UCS on Datacenter Journey</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 24 Sep 2019 20:01:03 -0700</lastBuildDate>
+    
+	<atom:link href="https://datacenterjourney.com/categories/ucs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Change UCS Fabric Interconnect IPs</title>
+      <link>https://datacenterjourney.com/2019/change-ucs-fi-ips/</link>
+      <pubDate>Tue, 24 Sep 2019 20:01:03 -0700</pubDate>
+      
+      <guid>https://datacenterjourney.com/2019/change-ucs-fi-ips/</guid>
+      <description>It doesn&amp;rsquo;t often happen that you need to change the Management IP Addresses on Cisco UCS Fabric Interconnects once they are configured and placed into production. If you do have to change them for whatever reason, as I have had to in the past, I thought it would be good to post the process and commands here for reference. Make sure you replace any information located within the &amp;lt; &amp;gt; to the IP information of your Fabric Interconnects.</description>
+    </item>
+    
+  </channel>
+</rss>

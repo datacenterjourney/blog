@@ -10,9 +10,9 @@
   
   
   
-  <link rel="prev" href="https://datacenterjourney.com/2019/first-it-job-helpdesk/" />
-  <link rel="next" href="https://datacenterjourney.com/2019/change-ucs-fi-ips/" />
-  <link rel="canonical" href="https://datacenterjourney.com/2019/project-pacific-announcement/" />
+  <link rel="prev" href="https://datacenterjourney.com/2019/project-pacific-announcement/" />
+  
+  <link rel="canonical" href="https://datacenterjourney.com/2019/change-ucs-fi-ips/" />
   <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -24,10 +24,10 @@
   <title>
        
        
-           Project Pacific Announcement | Datacenter Journey
+           Change UCS Fabric Interconnect IPs | Datacenter Journey
        
   </title>
-  <meta name="title" content="Project Pacific Announcement | Datacenter Journey">
+  <meta name="title" content="Change UCS Fabric Interconnect IPs | Datacenter Journey">
     
   
   <link rel="stylesheet" href="/font/iconfont.css">
@@ -35,17 +35,17 @@
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Project Pacific Announcement"/>
-<meta name="twitter:description" content="For those of you that haven&rsquo;t heard VMware made a few big announcements during this year&rsquo;s VMworld US. One of the more interesting to me was the announcement of Project Pacific. In my opinion, this has to be one of the more critical and landscape changing for system administrators and developers. Think of it as the next evolution of vSphere and a step ladder for organizations to be able to implement an application platform."/>
+<meta name="twitter:title" content="Change UCS Fabric Interconnect IPs"/>
+<meta name="twitter:description" content="It doesn&rsquo;t often happen that you need to change the Management IP Addresses on Cisco UCS Fabric Interconnects once they are configured and placed into production. If you do have to change them for whatever reason, as I have had to in the past, I thought it would be good to post the process and commands here for reference. Make sure you replace any information located within the &lt; &gt; to the IP information of your Fabric Interconnects."/>
 
   <script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "BlogPosting",
-  "headline": "Project Pacific Announcement",
+  "headline": "Change UCS Fabric Interconnect IPs",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https:\/\/datacenterjourney.com\/2019\/project-pacific-announcement\/"
+    "@id": "https:\/\/datacenterjourney.com\/2019\/change-ucs-fi-ips\/"
   },
   "image": {
     "@type": "ImageObject",
@@ -55,10 +55,10 @@
   },
   "genre": "posts",
   
-  "wordcount":  286 ,
-  "url": "https:\/\/datacenterjourney.com\/2019\/project-pacific-announcement\/",
-  "datePublished": "2019-09-05T21:10:43-07:00",
-  "dateModified": "2019-09-05T21:10:43-07:00",
+  "wordcount":  274 ,
+  "url": "https:\/\/datacenterjourney.com\/2019\/change-ucs-fi-ips\/",
+  "datePublished": "2019-09-24T20:01:03-07:00",
+  "dateModified": "2019-09-24T20:01:03-07:00",
   
   "publisher": {
     "@type": "Organization",
@@ -130,17 +130,16 @@
       		
 <article class="post-warp">
     <header class="post-header">
-        <h1 class="post-title">Project Pacific Announcement</h1>
+        <h1 class="post-title">Change UCS Fabric Interconnect IPs</h1>
         <div class="post-meta">
             Written by <a href="https://datacenterjourney.com" rel="author">Manuel Martinez</a> with ♥ 
                 <span class="post-time">
-                    on <time datetime=2019-09-05 >5 September 2019</time>
+                    on <time datetime=2019-09-24 >24 September 2019</time>
                 </span>
                 in
                 <i class="iconfont icon-folder"></i>
                 <span class="post-category">
-                        <a href="https://datacenterjourney.com/categories/vmware/"> VMware </a>
-                        <a href="https://datacenterjourney.com/categories/kubernetes/"> Kubernetes </a>
+                        <a href="https://datacenterjourney.com/categories/ucs/"> UCS </a>
                         
                 </span>
                 <i class="iconfont icon-timer"></i>
@@ -163,15 +162,37 @@
           
           
 
-          <p>For those of you that haven&rsquo;t heard VMware made a few big announcements during this year&rsquo;s VMworld US. One of the more interesting to me was the announcement of Project Pacific. In my opinion, this has to be one of the more critical and landscape changing for system administrators and developers. Think of it as the next evolution of vSphere and a step ladder for organizations to be able to implement an application platform.</p>
+          
 
-<p>So what exactly is Project Pacific? It&rsquo;s a re-architecture of vSphere to integrate and embed native Kubernetes into the ESXi hypervisor. What this does is aligns the management of the infrastructure to that of the modern application builds. Many of the new applications are built using containers and leveraging Kubernetes to be able to manage the orchestration of those containers. However, many of those containers still need to communicate with traditional stateful application workloads like databases. Those stateful applications are mostly running in virtual machines.</p>
+<p>It doesn&rsquo;t often happen that you need to change the Management IP Addresses on Cisco UCS Fabric Interconnects once they are configured and placed into production. If you do have to change them for whatever reason, as I have had to in the past, I thought it would be good to post the process and commands here for reference. Make sure you replace any information located within the &lt; &gt; to the IP information of your Fabric Interconnects. This can all be done non-disruptively to your environment since this will only affect the IPs for management of the Fabric Interconnets and the management IPs of any configured servers.</p>
 
-<p>Many admins are familiar with leveraging many of the vSphere features like vMotion, snapshots, security, policies, encryption, and setting resource limits and reservations for VMs. Now imagine the ability to utilize many of those same features for containers using Kubernetes Namespaces. Now to take it even a step further what if you could manage both of those environments and polices from the same management platform. That is what precisely what Project Pacific aims to accomplish. Unifying and simplifying management of the modern application is transformative and allows organizations to manage their infrastructure in a way that was not previously possible.</p>
+<h4 id="to-change-ip-for-fabric-interconnects-login-to-either-one-via-console">To change IP for fabric interconnects, login to either one via console:</h4>
 
-<p>To learn more, I recommend checking out link below to VMware&rsquo;s blog entry Introducing Project Pacific and the additional links provided on that page.</p>
+<pre><code class="language-python">scope fabric-interconnect a
+set out-of-band ip &lt;management IP of FI A&gt; netmask &lt;subnet mask&gt; gw &lt;default gateway&gt;
+</code></pre>
 
-<p><a href="https://blogs.vmware.com/vsphere/2019/08/introducing-project-pacific.html" rel="nofollow noreferrer" target="_blank">Introducing Project Pacific</a></p>
+<h4 id="repeat-for-the-second-fabric-interconnect">Repeat for the second fabric interconnect.</h4>
+
+<pre><code class="language-python">scope fabric-interconnect b
+set out-of-band ip &lt;management IP of FI B&gt; netmask &lt;subnet mask&gt; gw &lt;default gateway&gt;
+</code></pre>
+
+<h4 id="to-change-the-virtual-ip-used-for-system-management-this-should-be-in-the-same-vlan-as-the-individual-fabric-interconnect-ips">To change the Virtual IP used for system management, this should be in the same VLAN as the individual fabric interconnect IPs:</h4>
+
+<pre><code class="language-python">scope system
+set virtual-ip &lt;management IP of cluster&gt;
+</code></pre>
+
+<h4 id="finally-check-to-see-that-there-are-no-errors-then-actually-commit-if-everything-checks-out">Finally check to see that there are no errors, then actually commit if everything checks out:</h4>
+
+<pre><code class="language-python">commit-buffer verify-only
+commit-buffer
+</code></pre>
+
+<p><br>
+<strong>Attention:</strong>
+Something to be aware of if you happen to change the management IPs to a different subnet, you must recreate any &ldquo;mgmt-IP&rdquo; pools. The new pools are required because the mgmt-IP pools must reside on the same subnet as the management IPs of the Fabric Interconnects. You accomplish this by deleting the existing ones and creating new ones with the new management IP ranges.</p>
 
     </div>
 
@@ -185,7 +206,7 @@
            
             <p class="copyright-item">
                     <span>Words:</span>
-                   <span>286</span>
+                   <span>274</span>
             </p>
             
             <p class="copyright-item">
@@ -194,7 +215,7 @@
                 <span>
 
       
-        <a href="//twitter.com/share?url=https%3a%2f%2fdatacenterjourney.com%2f2019%2fproject-pacific-announcement%2f&amp;text=Project%20Pacific%20Announcement&amp;via=ManuelM_IT" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fdatacenterjourney.com%2f2019%2fchange-ucs-fi-ips%2f&amp;text=Change%20UCS%20Fabric%20Interconnect%20IPs&amp;via=ManuelM_IT" target="_blank" title="Share on Twitter">
           <i class="iconfont icon-twitter"></i>
         </a>
         
@@ -204,7 +225,7 @@
       
       
       
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fdatacenterjourney.com%2f2019%2fproject-pacific-announcement%2f&amp;title=Project%20Pacific%20Announcement" target="_blank" title="Share on LinkedIn">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fdatacenterjourney.com%2f2019%2fchange-ucs-fi-ips%2f&amp;title=Change%20UCS%20Fabric%20Interconnect%20IPs" target="_blank" title="Share on LinkedIn">
           <i class="iconfont icon-linkedin"></i>
         </a>
         
@@ -244,10 +265,8 @@
 
     <div class="post-nav">
         
-        <a href="https://datacenterjourney.com/2019/first-it-job-helpdesk/" class="prev" rel="prev" title="First IT Job - Helpdesk"><i class="iconfont icon-dajiantou"></i>&nbsp;First IT Job - Helpdesk</a>
+        <a href="https://datacenterjourney.com/2019/project-pacific-announcement/" class="prev" rel="prev" title="Project Pacific Announcement"><i class="iconfont icon-dajiantou"></i>&nbsp;Project Pacific Announcement</a>
          
-        
-        <a href="https://datacenterjourney.com/2019/change-ucs-fi-ips/" class="next" rel="next" title="Change UCS Fabric Interconnect IPs">Change UCS Fabric Interconnect IPs&nbsp;<i class="iconfont icon-xiaojiantou"></i></a>
         
     </div>
 
