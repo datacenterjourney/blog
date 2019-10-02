@@ -6,10 +6,19 @@
     <description>Recent content in Life Lessons on Datacenter Journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 27 Aug 2019 10:01:18 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 01 Oct 2019 21:27:30 -0700</lastBuildDate>
     
 	<atom:link href="https://datacenterjourney.com/categories/life-lessons/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>My Home Lab</title>
+      <link>https://datacenterjourney.com/2019/my-home-lab/</link>
+      <pubDate>Tue, 01 Oct 2019 21:27:30 -0700</pubDate>
+      
+      <guid>https://datacenterjourney.com/2019/my-home-lab/</guid>
+      <description>It&amp;rsquo;s been a while since I had done much with my home lab and decided it was time to give it some much-needed attention. The last update it received was around the time that ESXi 6.5u1 was released. For those of you interested, I am currently running a Supermicro SYS-5028D-TN4T mini-tower running an Intel 8-core Xeon D-1540 processor with 128GB of memory. For network connectivity, it comes with 2x 10GbE and 2x 1GbE ports, and for storage, 4x 3.</description>
+    </item>
     
     <item>
       <title>First IT Job - Helpdesk</title>

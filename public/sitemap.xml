@@ -4,7 +4,69 @@
     <url>
       <loc>https://datacenterjourney.com/categories/</loc>
       
-      <lastmod>2019-09-24T20:01:03-07:00</lastmod>
+      <lastmod>2019-10-01T21:27:30-07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://datacenterjourney.com/</loc>
+      
+      <lastmod>2019-10-01T21:27:30-07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://datacenterjourney.com/categories/homelab/</loc>
+      
+      <lastmod>2019-10-01T21:27:30-07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://datacenterjourney.com/categories/life-lessons/</loc>
+      
+      <lastmod>2019-10-01T21:27:30-07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://datacenterjourney.com/2019/my-home-lab/</loc>
+      
+      <lastmod>2019-10-01T21:27:30-07:00</lastmod>
+      
+      
+      <changefreq>monthly</changefreq>
+      
+      
+      <priority>0.5</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://datacenterjourney.com/posts/</loc>
+      
+      <lastmod>2019-10-01T21:27:30-07:00</lastmod>
       
       
       
@@ -23,30 +85,6 @@
       
       
       <priority>0.5</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://datacenterjourney.com/</loc>
-      
-      <lastmod>2019-09-24T20:01:03-07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://datacenterjourney.com/posts/</loc>
-      
-      <lastmod>2019-09-24T20:01:03-07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
       
       
     </url>
@@ -117,18 +155,6 @@
   
     <url>
       <loc>https://datacenterjourney.com/categories/journey/</loc>
-      
-      <lastmod>2019-08-27T10:01:18-07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://datacenterjourney.com/categories/life-lessons/</loc>
       
       <lastmod>2019-08-27T10:01:18-07:00</lastmod>
       
