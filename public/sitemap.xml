@@ -4,7 +4,7 @@
     <url>
       <loc>https://datacenterjourney.com/categories/</loc>
       
-      <lastmod>2019-10-01T21:27:30-07:00</lastmod>
+      <lastmod>2019-10-03T21:33:40-07:00</lastmod>
       
       
       
@@ -16,7 +16,19 @@
     <url>
       <loc>https://datacenterjourney.com/</loc>
       
-      <lastmod>2019-10-01T21:27:30-07:00</lastmod>
+      <lastmod>2019-10-03T21:33:40-07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://datacenterjourney.com/categories/esxi/</loc>
+      
+      <lastmod>2019-10-03T21:33:40-07:00</lastmod>
       
       
       
@@ -28,7 +40,45 @@
     <url>
       <loc>https://datacenterjourney.com/categories/homelab/</loc>
       
-      <lastmod>2019-10-01T21:27:30-07:00</lastmod>
+      <lastmod>2019-10-03T21:33:40-07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://datacenterjourney.com/posts/</loc>
+      
+      <lastmod>2019-10-03T21:33:40-07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://datacenterjourney.com/2019/standalone_esxi_upgrade_6.5_to_6.7u3/</loc>
+      
+      <lastmod>2019-10-03T21:33:40-07:00</lastmod>
+      
+      
+      <changefreq>monthly</changefreq>
+      
+      
+      <priority>0.5</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://datacenterjourney.com/categories/vmware/</loc>
+      
+      <lastmod>2019-10-03T21:33:40-07:00</lastmod>
       
       
       
@@ -59,18 +109,6 @@
       
       
       <priority>0.5</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://datacenterjourney.com/posts/</loc>
-      
-      <lastmod>2019-10-01T21:27:30-07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
       
       
     </url>
@@ -123,18 +161,6 @@
       
       
       <priority>0.5</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://datacenterjourney.com/categories/vmware/</loc>
-      
-      <lastmod>2019-09-05T21:10:43-07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
       
       
     </url>
@@ -205,18 +231,6 @@
   
     <url>
       <loc>https://datacenterjourney.com/categories/automation/</loc>
-      
-      <lastmod>2019-08-12T05:52:43-07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://datacenterjourney.com/categories/esxi/</loc>
       
       <lastmod>2019-08-12T05:52:43-07:00</lastmod>
       

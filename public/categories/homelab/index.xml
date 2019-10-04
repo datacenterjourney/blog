@@ -6,10 +6,19 @@
     <description>Recent content in HomeLab on Datacenter Journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 01 Oct 2019 21:27:30 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 03 Oct 2019 21:33:40 -0700</lastBuildDate>
     
 	<atom:link href="https://datacenterjourney.com/categories/homelab/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Standalone ESXi Upgrade 6.5 to 6.7u3</title>
+      <link>https://datacenterjourney.com/2019/standalone_esxi_upgrade_6.5_to_6.7u3/</link>
+      <pubDate>Thu, 03 Oct 2019 21:33:40 -0700</pubDate>
+      
+      <guid>https://datacenterjourney.com/2019/standalone_esxi_upgrade_6.5_to_6.7u3/</guid>
+      <description>After logging in to my ESXi host after some time away, I realized that it was still running vSphere 6.5u1. It was time to do an upgrade, and as stated in my last post, I&amp;rsquo;m running a nested lab environment from a single physical host. I am unable to leverage VUM (vCenter Upgrade Manager) to do the upgrades since my vCenter and everything else lives on the one host I need to upgrade.</description>
+    </item>
     
     <item>
       <title>My Home Lab</title>

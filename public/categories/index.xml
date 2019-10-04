@@ -6,17 +6,35 @@
     <description>Recent content in Categories on Datacenter Journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 01 Oct 2019 21:27:30 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 03 Oct 2019 21:33:40 -0700</lastBuildDate>
     
 	<atom:link href="https://datacenterjourney.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>ESXi</title>
+      <link>https://datacenterjourney.com/categories/esxi/</link>
+      <pubDate>Thu, 03 Oct 2019 21:33:40 -0700</pubDate>
+      
+      <guid>https://datacenterjourney.com/categories/esxi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>HomeLab</title>
       <link>https://datacenterjourney.com/categories/homelab/</link>
-      <pubDate>Tue, 01 Oct 2019 21:27:30 -0700</pubDate>
+      <pubDate>Thu, 03 Oct 2019 21:33:40 -0700</pubDate>
       
       <guid>https://datacenterjourney.com/categories/homelab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VMware</title>
+      <link>https://datacenterjourney.com/categories/vmware/</link>
+      <pubDate>Thu, 03 Oct 2019 21:33:40 -0700</pubDate>
+      
+      <guid>https://datacenterjourney.com/categories/vmware/</guid>
       <description></description>
     </item>
     
@@ -44,15 +62,6 @@
       <pubDate>Thu, 05 Sep 2019 21:10:43 -0700</pubDate>
       
       <guid>https://datacenterjourney.com/categories/kubernetes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>VMware</title>
-      <link>https://datacenterjourney.com/categories/vmware/</link>
-      <pubDate>Thu, 05 Sep 2019 21:10:43 -0700</pubDate>
-      
-      <guid>https://datacenterjourney.com/categories/vmware/</guid>
       <description></description>
     </item>
     
@@ -89,15 +98,6 @@
       <pubDate>Mon, 12 Aug 2019 05:52:43 -0700</pubDate>
       
       <guid>https://datacenterjourney.com/categories/automation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ESXi</title>
-      <link>https://datacenterjourney.com/categories/esxi/</link>
-      <pubDate>Mon, 12 Aug 2019 05:52:43 -0700</pubDate>
-      
-      <guid>https://datacenterjourney.com/categories/esxi/</guid>
       <description></description>
     </item>
     

@@ -5,8 +5,77 @@
     <description>Recent content in Datacenter Journey on Datacenter Journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 01 Oct 2019 21:27:30 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 03 Oct 2019 21:33:40 -0700</lastBuildDate>
     <atom:link href="https://datacenterjourney.com/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Standalone ESXi Upgrade 6.5 to 6.7u3</title>
+      <link>https://datacenterjourney.com/2019/standalone_esxi_upgrade_6.5_to_6.7u3/</link>
+      <pubDate>Thu, 03 Oct 2019 21:33:40 -0700</pubDate>
+      
+      <guid>https://datacenterjourney.com/2019/standalone_esxi_upgrade_6.5_to_6.7u3/</guid>
+      <description>
+
+&lt;p&gt;After logging in to my ESXi host after some time away, I realized that it was still running vSphere 6.5u1. It was time to do an upgrade, and as stated in my last post, I&amp;rsquo;m running a nested lab environment from a single physical host. I am unable to leverage VUM (vCenter Upgrade Manager) to do the upgrades since my vCenter and everything else lives on the one host I need to upgrade. I&amp;rsquo;ll be walking you through the process to perform the update so that you can complete it and subsequent updates.&lt;/p&gt;
+
+&lt;h3 id=&#34;pre-planning&#34;&gt;Pre-planning&lt;/h3&gt;
+
+&lt;p&gt;To have a successful upgrade in any situation, one of the most important steps, in my opinion, is doing the pre-planning and research. Before even starting to do any of the real work, you need to make sure you have everything you need, and you have thought through the entire process. First, I check to make sure that the upgrade path that I&amp;rsquo;m taking between versions is possible to jump straight to. If not, is there a version I need to go to in-between. Next, it&amp;rsquo;s time to check the release notes of the version I&amp;rsquo;m upgrading to and see what some of the known issues are and if I will be affected by them. If there are no show stoppers at this point, I move forward and get the Image Profile Name of the update. Finally, I log into my account on my.vmware.com to download the &lt;strong&gt;VMware vSphere Hypervisor (ESXi) Offline Bundle&lt;/strong&gt;, which should be a .zip file.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://datacenterjourney.com/img/ImageProfileName1.png&#34; alt=&#34;ImageProfile&#34; /&gt;
+&lt;img src=&#34;https://datacenterjourney.com/img/OfflineBundle1.png&#34; alt=&#34;OfflineBundle&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;preparing-the-host&#34;&gt;Preparing the host&lt;/h3&gt;
+
+&lt;p&gt;Before beginning the upgrade, you need to shut down and running Virtual Machines that are on the host and take a back up of any critical VMs. Now we will enable a local datastore to use for Swap to avoid any potential errors during the upgrade process. Logging into the UI and on the left-hand side in the Navigator, go to Manage and then under the System tab click on Swap, then Edit settings. Click the drop-down and select a local datastore to use.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://datacenterjourney.com/img/DsSwapConfig1.png&#34; alt=&#34;DatastoreSwap&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, you will use that same datastore to upload the Offline Bundle to that you downloaded earlier. Using the UI Navigator again, you will go to Storage, and then under the Datastores tab, click on the local datastore that you selected to apply as Swap. Click on the Datastore browser, then Upload, and browse to the location of the Offline Bundle.  You will choose the file and copy it to the datastore for use with the upgrade later. You can now close the Datastore browser.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://datacenterjourney.com/img/EsxiFileUpload1.png&#34; alt=&#34;EsxiUpload&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Next, put the host into Maintenance Mode. You can perform this in any number of ways, using the GUI, PowerCLI, or ESXCLI. For this example, we will use the ESXCLI commands since we will be using that medium for the upgrade, as well. Either from the console or via SSH log into your ESXi host and then run the following command to enable it.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;esxcli system maintenanceMode set -e True
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I always find it good practice to reboot the host before performing any upgrades to make sure I have a clean memory state. You can do that with the following command replacing the information inside the &amp;lt;&amp;gt;. The number after the -d is the delay in seconds before rebooting. The text after the -r is the reason for the reboot.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;esxcli system shutdown reboot -d &amp;lt;15&amp;gt; -r &amp;lt;Clear memory before upgrading to 6.7u3&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;upgrading-the-host&#34;&gt;Upgrading the host&lt;/h3&gt;
+
+&lt;p&gt;Once the host is back up and accessible, you will log back in from the console or via SSH. Then, I like to list out the contents of the datastore where I copied the Offline Bundle to and make sure I see it. Use the &amp;lsquo;ls&amp;rsquo; command followed by the datastore path to list the contents of the directory. Make sure to replace the name within the &amp;lt;&amp;gt; with the name of your datastore.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ls /vmfs/volumes/&amp;lt;SATA_1TB_Disk2&amp;gt;/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://datacenterjourney.com/img/DsFileList1.png&#34; alt=&#34;DatastoreFiles&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now you will start the upgrade of the ESXi host using the following command again, replacing the profile, datastore, and file names within the &amp;lt;&amp;gt;. Once it completes, you will get a message with the result of running the command. If updated successfully, you would get a notification that a reboot is required for the update to take effect, followed by the VIBs installed.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;esxcli software profile update -p &amp;lt;ESXi-6.7.0-20190802001-standard&amp;gt; -d /vmfs/volumes/&amp;lt;SATA_1TB_Disk2&amp;gt;/&amp;lt;update-from-esxi6.7-6.7_update03.zip&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://datacenterjourney.com/img/EsxiOfflineUpgrade1.png&#34; alt=&#34;EsxiOfflineUpgrade&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To complete the upgrade, reboot the ESXi host once again using ESXCLI commands.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;esxcli system shutdown reboot -d &amp;lt;15&amp;gt; -r &amp;lt;Complete upgrade to 6.7u3&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can now log in to verify that you are indeed on the new version and take your host out of maintenance mode.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;esxcli system maintenanceMode set -e False
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;final-thoughts&#34;&gt;Final Thoughts&lt;/h3&gt;
+
+&lt;p&gt;I hope this was informative and helpful to anyone new to upgrading a standalone ESXi host manually or if you need a refresher. Please comment below if you found this post useful or would like to see something specific in a future post.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>My Home Lab</title>
