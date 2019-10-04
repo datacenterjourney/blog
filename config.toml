@@ -177,7 +177,6 @@ clientSecret = ""
   placeholder = 'your comments ...'
   visitor = true
 
-[params.utterances]         # utteranc is a comment system based on GitHub issues.
-    enable = true
-    repo = "datacenterjourney/blogcomments"    # The repo to store comments
-    issueTerm = "pathname"
+[params.utterances]       # https://utteranc.es/
+    owner = "datacenterjourney"              # Your GitHub ID
+    repo = "blogcomments"               # The repo to store comments
