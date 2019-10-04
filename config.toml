@@ -176,3 +176,8 @@ clientSecret = ""
   avatar = 'mm'
   placeholder = 'your comments ...'
   visitor = true
+
+[params.utterances]         # utteranc is a comment system based on GitHub issues.
+    enable = true
+    repo = "datacenterjourney/blogcomments"    # The repo to store comments
+    issueTerm = "pathname"
