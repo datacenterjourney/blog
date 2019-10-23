@@ -13,17 +13,17 @@ After logging in to my ESXi host after some time away, I realized that it was st
 ### Pre-planning
 To have a successful upgrade in any situation, one of the most important steps, in my opinion, is doing the pre-planning and research. Before even starting to do any of the real work, you need to make sure you have everything you need, and you have thought through the entire process. First, I check to make sure that the upgrade path that I'm taking between versions is possible to jump straight to. If not, is there a version I need to go to in-between. Next, it's time to check the release notes of the version I'm upgrading to and see what some of the known issues are and if I will be affected by them. If there are no show stoppers at this point, I move forward and get the Image Profile Name of the update. Finally, I log into my account on my.vmware.com to download the **VMware vSphere Hypervisor (ESXi) Offline Bundle**, which should be a .zip file.
 
-![ImageProfile](/img/ImageProfileName1.png)
-![OfflineBundle](/img/OfflineBundle1.png)
+<img src = "/images/2019/2019-10/ImageProfileName1.png"></img>
+<img src = "/images/2019/2019-10/OfflineBundle1.png"></img>
 
 ### Preparing the host
 Before beginning the upgrade, you need to shut down and running Virtual Machines that are on the host and take a back up of any critical VMs. Now we will enable a local datastore to use for Swap to avoid any potential errors during the upgrade process. Logging into the UI and on the left-hand side in the Navigator, go to Manage and then under the System tab click on Swap, then Edit settings. Click the drop-down and select a local datastore to use.
 
-![DatastoreSwap](/img/DsSwapConfig1.png)
+<img src = "/images/2019/2019-10/DsSwapConfig1.png"></img>
 
 Now, you will use that same datastore to upload the Offline Bundle to that you downloaded earlier. Using the UI Navigator again, you will go to Storage, and then under the Datastores tab, click on the local datastore that you selected to apply as Swap. Click on the Datastore browser, then Upload, and browse to the location of the Offline Bundle.  You will choose the file and copy it to the datastore for use with the upgrade later. You can now close the Datastore browser.
 
-![EsxiUpload](/img/EsxiFileUpload1.png)
+<img src = "/images/2019/2019-10/EsxiFileUpload1.png"></img>
 
 Next, put the host into Maintenance Mode. You can perform this in any number of ways, using the GUI, PowerCLI, or ESXCLI. For this example, we will use the ESXCLI commands since we will be using that medium for the upgrade, as well. Either from the console or via SSH log into your ESXi host and then run the following command to enable it.
 ```bash
@@ -39,14 +39,14 @@ Once the host is back up and accessible, you will log back in from the console o
 ls /vmfs/volumes/<SATA_1TB_Disk2>/
 ```
 
-![DatastoreFiles](/img/DsFileList1.png)
+<img src = "/images/2019/2019-10/DsFileList1.png"></img>
 
 Now you will start the upgrade of the ESXi host using the following command again, replacing the profile, datastore, and file names within the <>. Once it completes, you will get a message with the result of running the command. If updated successfully, you would get a notification that a reboot is required for the update to take effect, followed by the VIBs installed.
 ```bash
 esxcli software profile update -p <ESXi-6.7.0-20190802001-standard> -d /vmfs/volumes/<SATA_1TB_Disk2>/<update-from-esxi6.7-6.7_update03.zip>
 ```
 
-![EsxiOfflineUpgrade](/img/EsxiOfflineUpgrade1.png)
+<img src = "/images/2019/2019-10/EsxiOfflineUpgrade1.png"></img>
 
 To complete the upgrade, reboot the ESXi host once again using ESXCLI commands.
 ```bash
