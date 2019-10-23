@@ -17,11 +17,11 @@ Open a terminal window and then run the following command at the prompt:
 ```  
 The command will output information about what it will be installing and the directories it will create. At this point, you will be prompted to press the "RETURN" key to continue or any other key to abort the installation like in the screenshot below.  
 
-![Homebrew1](../img/2019/2019-08/Homebrew1.png)
+![Homebrew1](../images/2019/2019-08/Homebrew1.png)
 
 Shortly after you hit the "RETURN" key, a prompted for the password of the user account that is currently logged in will appear.  
 
-![Homebrew2](/img/2019/2019-08/Homebrew2.png)
+![Homebrew2](/images/2019/2019-08/Homebrew2.png)
 
 Homebrew will continue to create several directories and start downloading necessary packages to complete the installation like Xcode command-line tools. After some time you should see a message showing "**==> Installation successful!**" and you will be back at a command prompt. You have now successfully installed Homebrew and can use it to install and manage many different packages.
 
