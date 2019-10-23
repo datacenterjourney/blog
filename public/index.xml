@@ -210,7 +210,7 @@ Something to be aware of if you happen to change the management IPs to a differe
 
 &lt;p&gt;The command will output information about what it will be installing and the directories it will create. At this point, you will be prompted to press the &amp;ldquo;RETURN&amp;rdquo; key to continue or any other key to abort the installation like in the screenshot below.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../images/2019/2019-08/Homebrew1.png&#34; alt=&#34;Homebrew1&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;images/2019/2019-08/Homebrew1.png&#34; alt=&#34;Homebrew1&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Shortly after you hit the &amp;ldquo;RETURN&amp;rdquo; key, a prompted for the password of the user account that is currently logged in will appear.&lt;/p&gt;
 
@@ -218,7 +218,7 @@ Something to be aware of if you happen to change the management IPs to a differe
 
 &lt;p&gt;Homebrew will continue to create several directories and start downloading necessary packages to complete the installation like Xcode command-line tools. After some time you should see a message showing &amp;ldquo;&lt;strong&gt;==&amp;gt; Installation successful!&lt;/strong&gt;&amp;rdquo; and you will be back at a command prompt. You have now successfully installed Homebrew and can use it to install and manage many different packages.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://datacenterjourney.com/img/2019/2019-08/Homebrew3.png&#34; alt=&#34;Homebrew3&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://datacenterjourney.com/images/2019/2019-08/Homebrew3.png&#34; alt=&#34;Homebrew3&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;installing-powershell&#34;&gt;Installing PowerShell&lt;/h3&gt;
 
@@ -231,7 +231,7 @@ Something to be aware of if you happen to change the management IPs to a differe
 
 &lt;p&gt;After it has downloaded a few required files, it will prompt for the current user&amp;rsquo;s password. When the installation is complete, you will see a foaming beer mug and the message that &amp;ldquo;powershell was successfully installed!&amp;rdquo; and be returned to a command prompt.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://datacenterjourney.com/img/2019/2019-08/PowerShell1.png&#34; alt=&#34;PowerShell1&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://datacenterjourney.com/images/2019/2019-08/PowerShell1.png&#34; alt=&#34;PowerShell1&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Finally, verify that your installation is working correctly by running the command to start Powershell. If you want to run PowerShell with elevated privileges, then you will need to run it with the &amp;ldquo;sudo&amp;rdquo; command and enter the logged-on user&amp;rsquo;s password.&lt;/p&gt;
 
@@ -242,7 +242,7 @@ sudo pwsh
 
 &lt;p&gt;If PowerShell is working correctly, then you will see output similar to the image below.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://datacenterjourney.com/img/2019/2019-08/PowerShell2.png&#34; alt=&#34;PowerShell2&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://datacenterjourney.com/images/2019/2019-08/PowerShell2.png&#34; alt=&#34;PowerShell2&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;updating-powershell&#34;&gt;Updating PowerShell&lt;/h3&gt;
 
@@ -251,8 +251,8 @@ sudo pwsh
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;brew update
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://datacenterjourney.com/img/2019/2019-08/Homebrew4.png&#34; alt=&#34;Homebrew4&#34; /&gt;
-&lt;img src=&#34;https://datacenterjourney.com/img/2019/2019-08/Homebrew5.png&#34; alt=&#34;Homebrew5&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://datacenterjourney.com/images/2019/2019-08/Homebrew4.png&#34; alt=&#34;Homebrew4&#34; /&gt;
+&lt;img src=&#34;https://datacenterjourney.com/images/2019/2019-08/Homebrew5.png&#34; alt=&#34;Homebrew5&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Once that is complete you can then run the command to upgrade PowerShell.&lt;/p&gt;
 
@@ -261,8 +261,8 @@ sudo pwsh
 
 &lt;p&gt;Again you are prompted for the logged in user&amp;rsquo;s password to continue with the installation. Then it will finish the upgrade and you will once again be brought to the command prompt with a message before that &amp;ldquo;&lt;strong&gt;powershell was successfully upgraded!&lt;/strong&gt;&amp;ldquo;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://datacenterjourney.com/img/2019/2019-08/PowerShell3.png&#34; alt=&#34;PowerShell3&#34; /&gt;
-&lt;img src=&#34;https://datacenterjourney.com/img/2019/2019-08/PowerShell4.png&#34; alt=&#34;PowerShell4&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://datacenterjourney.com/images/2019/2019-08/PowerShell3.png&#34; alt=&#34;PowerShell3&#34; /&gt;
+&lt;img src=&#34;https://datacenterjourney.com/images/2019/2019-08/PowerShell4.png&#34; alt=&#34;PowerShell4&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I hope this was informative and helpful to anyone just getting started with PowerShell on macOS.&lt;/p&gt;
 </description>
