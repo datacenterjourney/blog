@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  
+  
+  
+  
+  
+  <link rel="prev" href="https://datacenterjourney.com/2019/standalone_esxi_upgrade_6.5_to_6.7u3/" />
+  
+  <link rel="canonical" href="https://datacenterjourney.com/2019/send_f11_on_macos/" />
+  <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Send F11 Key on macOS | Datacenter Journey
+       
+  </title>
+  <meta name="title" content="Send F11 Key on macOS | Datacenter Journey">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Send F11 Key on macOS"/>
+<meta name="twitter:description" content="I enjoy using a Mac both for work and at home. There is an issue that I have come upon more than one occasion, and it always takes me a while to remember how to fix it. Figured I could post it here so that I have it as a reference and maybe help someone else as well.
+There are times when accessing the console for both ESXi and UCS KVM, where you are required to send the F11 key."/>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Send F11 Key on macOS",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https:\/\/datacenterjourney.com\/2019\/send_f11_on_macos\/"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https:\/\/datacenterjourney.com\/cover.png",
+    "width":  800 ,
+    "height":  600 
+  },
+  "genre": "posts",
+  
+  "wordcount":  148 ,
+  "url": "https:\/\/datacenterjourney.com\/2019\/send_f11_on_macos\/",
+  "datePublished": "2019-10-22T19:51:06-07:00",
+  "dateModified": "2019-10-22T19:51:06-07:00",
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Manuel Martinez",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https:\/\/datacenterjourney.com\/logo.png",
+      "width":  127 ,
+      "height":  40 
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Manuel Martinez"
+  },
+  "description": ""
+}
+</script>
+</head>
+
+  
+
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="https://datacenterjourney.com">Datacenter Journey</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+                <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;<a href="https://datacenterjourney.com">Datacenter Journey</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp">
+    <header class="post-header">
+        <h1 class="post-title">Send F11 Key on macOS</h1>
+        <div class="post-meta">
+            Written by <a href="https://datacenterjourney.com" rel="author">Manuel Martinez</a> with ♥ 
+                <span class="post-time">
+                    on <time datetime=2019-10-22 >22 October 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://datacenterjourney.com/categories/esxi/"> ESXi </a>
+                        <a href="https://datacenterjourney.com/categories/macos/"> macOS </a>
+                        <a href="https://datacenterjourney.com/categories/ucs/"> UCS </a>
+                        
+                </span>
+                <i class="iconfont icon-timer"></i>
+                1 min
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>I enjoy using a Mac both for work and at home. There is an issue that I have come upon more than one occasion, and it always takes me a while to remember how to fix it. Figured I could post it here so that I have it as a reference and maybe help someone else as well.</p>
+
+<p>There are times when accessing the console for both ESXi and UCS KVM, where you are required to send the F11 key. There are a few different key combinations that you can use to accomplish this, depending on your keyboard or macOS version. The first way is to use FN-CMD-F11, the other is just FN-F11. If you use those key combinations and it still doesn&rsquo;t seem to work, you will need to go to System Preferences &gt; Keyboard &gt; Shortcuts and uncheck the box next to &ldquo;Show Desktop&rdquo; for F11.</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Manuel Martinez </span>
+                </p>
+            
+           
+            <p class="copyright-item">
+                    <span>Words:</span>
+                   <span>148</span>
+            </p>
+            
+            <p class="copyright-item">
+                
+                <span>Share:</span>
+                <span>
+
+      
+        <a href="//twitter.com/share?url=https%3a%2f%2fdatacenterjourney.com%2f2019%2fsend_f11_on_macos%2f&amp;text=Send%20F11%20Key%20on%20macOS&amp;via=ManuelM_IT" target="_blank" title="Share on Twitter">
+          <i class="iconfont icon-twitter"></i>
+        </a>
+        
+      
+      
+      
+      
+      
+      
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fdatacenterjourney.com%2f2019%2fsend_f11_on_macos%2f&amp;title=Send%20F11%20Key%20on%20macOS" target="_blank" title="Share on LinkedIn">
+          <i class="iconfont icon-linkedin"></i>
+        </a>
+        
+      
+      
+        
+      
+        
+      
+
+          
+
+          
+
+          
+
+          
+</span>
+                
+            </p>
+
+             
+            <p class="copyright-item">
+                Released under <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">Back</a></span> · 
+                <span><a href="https://datacenterjourney.com">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://datacenterjourney.com/2019/standalone_esxi_upgrade_6.5_to_6.7u3/" class="prev" rel="prev" title="Standalone ESXi Upgrade 6.5 to 6.7u3"><i class="iconfont icon-dajiantou"></i>&nbsp;Standalone ESXi Upgrade 6.5 to 6.7u3</a>
+         
+        
+    </div>
+
+    <div class="post-comment">
+          
+          
+
+
+    <script src="https://utteranc.es/client.js"
+            repo="datacenterjourney/blogcomments"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+ 
+
+
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2019</span>
+        
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://datacenterjourney.com">Manuel Martinez</a> | </span>
+         
+
+		  <span>Crafted with ❤️ by <a href="https://github.com/Fastbyte01/KeepIt" target="_blank" rel="external nofollow noopener noreffer">KeepIt</a> & <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+
+
+
+
+     </div>
+  </body>
+</html>

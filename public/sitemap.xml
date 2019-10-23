@@ -4,7 +4,7 @@
     <url>
       <loc>https://datacenterjourney.com/categories/</loc>
       
-      <lastmod>2019-10-03T21:33:40-07:00</lastmod>
+      <lastmod>2019-10-22T19:51:06-07:00</lastmod>
       
       
       
@@ -16,7 +16,7 @@
     <url>
       <loc>https://datacenterjourney.com/</loc>
       
-      <lastmod>2019-10-03T21:33:40-07:00</lastmod>
+      <lastmod>2019-10-22T19:51:06-07:00</lastmod>
       
       
       
@@ -28,7 +28,7 @@
     <url>
       <loc>https://datacenterjourney.com/categories/esxi/</loc>
       
-      <lastmod>2019-10-03T21:33:40-07:00</lastmod>
+      <lastmod>2019-10-22T19:51:06-07:00</lastmod>
       
       
       
@@ -38,9 +38,9 @@
     </url>
   
     <url>
-      <loc>https://datacenterjourney.com/categories/homelab/</loc>
+      <loc>https://datacenterjourney.com/categories/macos/</loc>
       
-      <lastmod>2019-10-03T21:33:40-07:00</lastmod>
+      <lastmod>2019-10-22T19:51:06-07:00</lastmod>
       
       
       
@@ -51,6 +51,44 @@
   
     <url>
       <loc>https://datacenterjourney.com/posts/</loc>
+      
+      <lastmod>2019-10-22T19:51:06-07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://datacenterjourney.com/2019/send_f11_on_macos/</loc>
+      
+      <lastmod>2019-10-22T19:51:06-07:00</lastmod>
+      
+      
+      <changefreq>monthly</changefreq>
+      
+      
+      <priority>0.5</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://datacenterjourney.com/categories/ucs/</loc>
+      
+      <lastmod>2019-10-22T19:51:06-07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://datacenterjourney.com/categories/homelab/</loc>
       
       <lastmod>2019-10-03T21:33:40-07:00</lastmod>
       
@@ -128,18 +166,6 @@
     </url>
   
     <url>
-      <loc>https://datacenterjourney.com/categories/ucs/</loc>
-      
-      <lastmod>2019-09-24T20:01:03-07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
       <loc>https://datacenterjourney.com/categories/kubernetes/</loc>
       
       <lastmod>2019-09-05T21:10:43-07:00</lastmod>
@@ -201,18 +227,6 @@
       
       
       <priority>0.5</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://datacenterjourney.com/categories/macos/</loc>
-      
-      <lastmod>2019-08-14T05:47:41-07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
       
       
     </url>
