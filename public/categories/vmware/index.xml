@@ -6,10 +6,19 @@
     <description>Recent content in VMware on Datacenter Journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 03 Oct 2019 21:33:40 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 03 Nov 2019 08:39:26 -0800</lastBuildDate>
     
 	<atom:link href="https://datacenterjourney.com/categories/vmware/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>PowerShell Cmdlet Conflicts</title>
+      <link>https://datacenterjourney.com/2019/powershell-cmdlet-conflicts/</link>
+      <pubDate>Sun, 03 Nov 2019 08:39:26 -0800</pubDate>
+      
+      <guid>https://datacenterjourney.com/2019/powershell-cmdlet-conflicts/</guid>
+      <description>Recently, I had something come up with a client who was migrating from Hyper-V to vSphere. One of the administrators is a big PowerShell user and brought to my attention that the Microsoft Hyper-V and VMware PowerCLI modules share some of the cmdlet names. Duplicate names become an issue when trying to manage particular objects like VMs since both modules have the Get-VM cmdlet. Due to this conflict, he removed the PowerCLI module to continue maintaining the Hyper-V servers.</description>
+    </item>
     
     <item>
       <title>Standalone ESXi Upgrade 6.5 to 6.7u3</title>

@@ -10,9 +10,9 @@
   
   
   
-  <link rel="prev" href="https://datacenterjourney.com/2019/standalone_esxi_upgrade_6.5_to_6.7u3/" />
-  <link rel="next" href="https://datacenterjourney.com/2019/powershell-cmdlet-conflicts/" />
-  <link rel="canonical" href="https://datacenterjourney.com/2019/send_f11_on_macos/" />
+  <link rel="prev" href="https://datacenterjourney.com/2019/send_f11_on_macos/" />
+  
+  <link rel="canonical" href="https://datacenterjourney.com/2019/powershell-cmdlet-conflicts/" />
   <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -24,10 +24,10 @@
   <title>
        
        
-           Send F11 Key on macOS | Datacenter Journey
+           PowerShell Cmdlet Conflicts | Datacenter Journey
        
   </title>
-  <meta name="title" content="Send F11 Key on macOS | Datacenter Journey">
+  <meta name="title" content="PowerShell Cmdlet Conflicts | Datacenter Journey">
     
   
   <link rel="stylesheet" href="/font/iconfont.css">
@@ -35,18 +35,17 @@
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Send F11 Key on macOS"/>
-<meta name="twitter:description" content="I enjoy using a Mac both for work and at home. There is an issue that I have come upon more than one occasion, and it always takes me a while to remember how to fix it. Figured I could post it here so that I have it as a reference and maybe help someone else as well.
-There are times when accessing the console for both ESXi and UCS KVM, where you are required to send the F11 key."/>
+<meta name="twitter:title" content="PowerShell Cmdlet Conflicts"/>
+<meta name="twitter:description" content="Recently, I had something come up with a client who was migrating from Hyper-V to vSphere. One of the administrators is a big PowerShell user and brought to my attention that the Microsoft Hyper-V and VMware PowerCLI modules share some of the cmdlet names. Duplicate names become an issue when trying to manage particular objects like VMs since both modules have the Get-VM cmdlet. Due to this conflict, he removed the PowerCLI module to continue maintaining the Hyper-V servers."/>
 
   <script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "BlogPosting",
-  "headline": "Send F11 Key on macOS",
+  "headline": "PowerShell Cmdlet Conflicts",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https:\/\/datacenterjourney.com\/2019\/send_f11_on_macos\/"
+    "@id": "https:\/\/datacenterjourney.com\/2019\/powershell-cmdlet-conflicts\/"
   },
   "image": {
     "@type": "ImageObject",
@@ -56,10 +55,10 @@ There are times when accessing the console for both ESXi and UCS KVM, where you 
   },
   "genre": "posts",
   
-  "wordcount":  148 ,
-  "url": "https:\/\/datacenterjourney.com\/2019\/send_f11_on_macos\/",
-  "datePublished": "2019-10-22T19:51:06-07:00",
-  "dateModified": "2019-10-22T19:51:06-07:00",
+  "wordcount":  493 ,
+  "url": "https:\/\/datacenterjourney.com\/2019\/powershell-cmdlet-conflicts\/",
+  "datePublished": "2019-11-03T08:39:26-08:00",
+  "dateModified": "2019-11-03T08:39:26-08:00",
   
   "publisher": {
     "@type": "Organization",
@@ -131,22 +130,22 @@ There are times when accessing the console for both ESXi and UCS KVM, where you 
       		
 <article class="post-warp">
     <header class="post-header">
-        <h1 class="post-title">Send F11 Key on macOS</h1>
+        <h1 class="post-title">PowerShell Cmdlet Conflicts</h1>
         <div class="post-meta">
             Written by <a href="https://datacenterjourney.com" rel="author">Manuel Martinez</a> with ♥ 
                 <span class="post-time">
-                    on <time datetime=2019-10-22 >22 October 2019</time>
+                    on <time datetime=2019-11-03 >3 November 2019</time>
                 </span>
                 in
                 <i class="iconfont icon-folder"></i>
                 <span class="post-category">
-                        <a href="https://datacenterjourney.com/categories/esxi/"> ESXi </a>
-                        <a href="https://datacenterjourney.com/categories/macos/"> macOS </a>
-                        <a href="https://datacenterjourney.com/categories/ucs/"> UCS </a>
+                        <a href="https://datacenterjourney.com/categories/powershell/"> PowerShell </a>
+                        <a href="https://datacenterjourney.com/categories/vmware/"> VMware </a>
+                        <a href="https://datacenterjourney.com/categories/automation/"> Automation </a>
                         
                 </span>
                 <i class="iconfont icon-timer"></i>
-                1 min
+                3 min
         </div>
     </header>
     <div class="post-content">
@@ -165,9 +164,52 @@ There are times when accessing the console for both ESXi and UCS KVM, where you 
           
           
 
-          <p>I enjoy using a Mac both for work and at home. There is an issue that I have come upon more than one occasion, and it always takes me a while to remember how to fix it. Figured I could post it here so that I have it as a reference and maybe help someone else as well.</p>
+          <p>Recently, I had something come up with a client who was migrating from Hyper-V to vSphere. One of the administrators is a big PowerShell user and brought to my attention that the Microsoft Hyper-V and VMware PowerCLI modules share some of the cmdlet names. Duplicate names become an issue when trying to manage particular objects like VMs since both modules have the Get-VM cmdlet. Due to this conflict, he removed the PowerCLI module to continue maintaining the Hyper-V servers. I decided to do some testing and figure out how he would be able to have both modules and manage both environments with PowerShell.</p>
 
-<p>There are times when accessing the console for both ESXi and UCS KVM, where you are required to send the F11 key. There are a few different key combinations that you can use to accomplish this, depending on your keyboard or macOS version. The first way is to use FN-CMD-F11, the other is just FN-F11. If you use those key combinations and it still doesn&rsquo;t seem to work, you will need to go to System Preferences &gt; Keyboard &gt; Shortcuts and uncheck the box next to &ldquo;Show Desktop&rdquo; for F11.</p>
+<p>First, I installed both Modules on my Windows machine to try and replicate the issue my client was having. Then, I verified that both modules were present by running the following command.</p>
+
+<pre><code class="language-PowerShell">Get-Module -ListAvailable | Where-Object {($_.Name -match 'Hyper-V') -or ($_.Name -match 'VMware.VimAutomation.Core')}
+</code></pre>
+
+<p><img src = "/images/2019/2019-11/CmdletConflict1.png"></img></p>
+
+<p>Now, he stated that when he runs the command <code>Get-VM</code> against vSphere, it tries to run the Hyper-V cmdlet. When I run the command <code>Get-Command Get-VM</code>, I get the following result showing that it will run the cmdlet for the PowerCLI Module. The reason is that the PowerCLI module is the one only one imported when starting PowerShell.</p>
+
+<p><img src = "/images/2019/2019-11/CmdletConflict2.png"></img>
+<img src = "/images/2019/2019-11/CmdletConflict3.png"></img></p>
+
+<p>Once I import the Hyper-V module and rerun the command to above now, it shows that it will run the Hyper-V cmdlet.</p>
+
+<pre><code class="language-Powershell">Import-Module -Name Hyper-V
+Get-Command Get-VM
+</code></pre>
+
+<p><img src = "/images/2019/2019-11/CmdletConflict4.png"></img></p>
+
+<p>However, when I run the command <code>Get-Command Get-VM -All</code> now, it shows that I have two cmdlets with the same name for different modules. The reason that it will run the Hyper-V cmdlet let when both modules are present is because it searches in alphabetical order. This has to be the reason my client was having the issue with the <code>Get-VM</code> command running the Hyper-V cmdlet instead of the PowerCLI one he was trying to run.</p>
+
+<p><img src = "/images/2019/2019-11/CmdletConflict5.png"></img></p>
+
+<p>There are two solutions I&rsquo;m going to demonstrate work regardless of which cmdlet takes precedence. The first way is to include the module name as a path before the cmdlet. This method can become quite cumbersome to type every time, especially if you want to run the PowerCLI cmdlets.</p>
+
+<pre><code class="language-PowerShell">Hyper-V\Get-VM
+VMware.VimAutomation.Core\Get-VM
+</code></pre>
+
+<p>The second solution is to include a custom prefix when importing the modules with the commands below in a new PowerShell session. Then you can verify that they were imported successfully by running the last command to show them.</p>
+
+<pre><code class="language-PowerShell">Import-Module -Name VMware.VimAutomation.Core -Prefix VMW
+Import-Module -Name Hyper-V -Prefix MS
+Get-Command Get-*VM
+</code></pre>
+
+<p><img src = "/images/2019/2019-11/CmdletConflict6.png"></img></p>
+
+<p>I did notice something interesting when importing the modules with the custom prefixes in my new session when running the <code>Get-Command Get-VM</code> and <code>Get-Command Get-VM -All</code>. It shows once again only the cmdlets for PowerCLI.</p>
+
+<p><img src = "/images/2019/2019-11/CmdletConflict7.png"></img></p>
+
+<p>I hope this is useful to others that might encounter an issue with two different modules with conflicting cmdlet names. This issue brings up an important consideration when creating your custom modules, to make sure you use unique cmdlet names. Leave me a comment if you found this helpful.</p>
 
     </div>
 
@@ -181,7 +223,7 @@ There are times when accessing the console for both ESXi and UCS KVM, where you 
            
             <p class="copyright-item">
                     <span>Words:</span>
-                   <span>148</span>
+                   <span>493</span>
             </p>
             
             <p class="copyright-item">
@@ -190,7 +232,7 @@ There are times when accessing the console for both ESXi and UCS KVM, where you 
                 <span>
 
       
-        <a href="//twitter.com/share?url=https%3a%2f%2fdatacenterjourney.com%2f2019%2fsend_f11_on_macos%2f&amp;text=Send%20F11%20Key%20on%20macOS&amp;via=ManuelM_IT" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fdatacenterjourney.com%2f2019%2fpowershell-cmdlet-conflicts%2f&amp;text=PowerShell%20Cmdlet%20Conflicts&amp;via=ManuelM_IT" target="_blank" title="Share on Twitter">
           <i class="iconfont icon-twitter"></i>
         </a>
         
@@ -200,7 +242,7 @@ There are times when accessing the console for both ESXi and UCS KVM, where you 
       
       
       
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fdatacenterjourney.com%2f2019%2fsend_f11_on_macos%2f&amp;title=Send%20F11%20Key%20on%20macOS" target="_blank" title="Share on LinkedIn">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fdatacenterjourney.com%2f2019%2fpowershell-cmdlet-conflicts%2f&amp;title=PowerShell%20Cmdlet%20Conflicts" target="_blank" title="Share on LinkedIn">
           <i class="iconfont icon-linkedin"></i>
         </a>
         
@@ -240,10 +282,8 @@ There are times when accessing the console for both ESXi and UCS KVM, where you 
 
     <div class="post-nav">
         
-        <a href="https://datacenterjourney.com/2019/standalone_esxi_upgrade_6.5_to_6.7u3/" class="prev" rel="prev" title="Standalone ESXi Upgrade 6.5 to 6.7u3"><i class="iconfont icon-dajiantou"></i>&nbsp;Standalone ESXi Upgrade 6.5 to 6.7u3</a>
+        <a href="https://datacenterjourney.com/2019/send_f11_on_macos/" class="prev" rel="prev" title="Send F11 Key on macOS"><i class="iconfont icon-dajiantou"></i>&nbsp;Send F11 Key on macOS</a>
          
-        
-        <a href="https://datacenterjourney.com/2019/powershell-cmdlet-conflicts/" class="next" rel="next" title="PowerShell Cmdlet Conflicts">PowerShell Cmdlet Conflicts&nbsp;<i class="iconfont icon-xiaojiantou"></i></a>
         
     </div>
 

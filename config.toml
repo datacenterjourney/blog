@@ -45,7 +45,7 @@ publishDir = "public"
     author = "Manuel Martinez"               # Author's name
     subtitle = "A collection of blog posts from my IT career"       # Subtitle
     cdn_url = ""           # Base CDN URL
-    home_mode = "" # post or other
+    home_mode = "post" # post or other
 
     google_verification = ""
     bing_verification = ""

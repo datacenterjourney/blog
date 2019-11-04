@@ -110,87 +110,384 @@
     	 <main class="main">
           <div class="container">
       		
-  
-  	<div class="intro">
-    
-    
+  	
+  	
+<div class="post-warp">
+	<div class="intro">
+			
+			
     
     <div class="avatar">
 			<a href="/posts/">	<img src="https://www.gravatar.com/avatar/731dace29cd84a8542c168e639c5c371?s=240&d=mp" alt="gravatar"> </a>
 		</div>
 		
+
     
     <h2 class="description">
        A collection of blog posts from my IT career
     </h2>
     
-    <div class="social-links">
-      
-<a href="https://github.com/datacenterjourney" target="_blank" rel="me noopener noreffer" target="_blank"><i class="iconfont icon-github"></i></a>
-
-
-<a href="https://linkedin.com/in/manuelmartinez-it" target="_blank" rel="me noopener noreffer" target="_blank"><i class="iconfont icon-linkedin"></i></a>
-
-
-<a href="https://twitter.com/ManuelM_IT" target="_blank" rel="me noopener noreffer" target="_blank"><i class="iconfont icon-twitter"></i></a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-    </div>
+ 
 </div>
+	
+		<article class="post" itemscope itemscope="" itemtype="http://schema.org/Article">
+
+			<header class="post-header">
+				<h1 class="post-title" itemprop="name headline"><a href="https://datacenterjourney.com/2019/powershell-cmdlet-conflicts/">PowerShell Cmdlet Conflicts</a></h1>
+			</header>
+			<div class="post-content">
+				 
+				   
+       			 
+
+       			Recently, I had something come up with a client who was migrating from Hyper-V to vSphere. One of the administrators is a big PowerShell user and brought to my attention that the Microsoft Hyper-V and VMware PowerCLI modules share some of the cmdlet names. Duplicate names become an issue when trying to manage particular objects like VMs since both modules have the Get-VM cmdlet. Due to this conflict, he removed the PowerCLI module to continue maintaining the Hyper-V servers.
+			</div>
+			<div class="post-footer">
+				<div class="post-meta">
+                <span class="post-time">
+                <time datetime=2019-11-03 itemprop="datePublished">3 November 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://datacenterjourney.com/categories/powershell/"> PowerShell </a>
+                        <a href="https://datacenterjourney.com/categories/vmware/"> VMware </a>
+                        <a href="https://datacenterjourney.com/categories/automation/"> Automation </a>
+                        
+                </span>
+        </div>
+				
+			</div>
+		</article>
+	
+		<article class="post" itemscope itemscope="" itemtype="http://schema.org/Article">
+
+			<header class="post-header">
+				<h1 class="post-title" itemprop="name headline"><a href="https://datacenterjourney.com/2019/send_f11_on_macos/">Send F11 Key on macOS</a></h1>
+			</header>
+			<div class="post-content">
+				 
+				   
+       			 
+
+       			I enjoy using a Mac both for work and at home. There is an issue that I have come upon more than one occasion, and it always takes me a while to remember how to fix it. Figured I could post it here so that I have it as a reference and maybe help someone else as well.
+There are times when accessing the console for both ESXi and UCS KVM, where you are required to send the F11 key.
+			</div>
+			<div class="post-footer">
+				<div class="post-meta">
+                <span class="post-time">
+                <time datetime=2019-10-22 itemprop="datePublished">22 October 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://datacenterjourney.com/categories/esxi/"> ESXi </a>
+                        <a href="https://datacenterjourney.com/categories/macos/"> macOS </a>
+                        <a href="https://datacenterjourney.com/categories/ucs/"> UCS </a>
+                        
+                </span>
+        </div>
+				
+			</div>
+		</article>
+	
+		<article class="post" itemscope itemscope="" itemtype="http://schema.org/Article">
+
+			<header class="post-header">
+				<h1 class="post-title" itemprop="name headline"><a href="https://datacenterjourney.com/2019/standalone_esxi_upgrade_6.5_to_6.7u3/">Standalone ESXi Upgrade 6.5 to 6.7u3</a></h1>
+			</header>
+			<div class="post-content">
+				 
+				   
+       			 
+
+       			After logging in to my ESXi host after some time away, I realized that it was still running vSphere 6.5u1. It was time to do an upgrade, and as stated in my last post, I&rsquo;m running a nested lab environment from a single physical host. I am unable to leverage VUM (vCenter Upgrade Manager) to do the upgrades since my vCenter and everything else lives on the one host I need to upgrade.
+			</div>
+			<div class="post-footer">
+				<div class="post-meta">
+                <span class="post-time">
+                <time datetime=2019-10-03 itemprop="datePublished">3 October 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://datacenterjourney.com/categories/esxi/"> ESXi </a>
+                        <a href="https://datacenterjourney.com/categories/homelab/"> HomeLab </a>
+                        <a href="https://datacenterjourney.com/categories/vmware/"> VMware </a>
+                        
+                </span>
+        </div>
+				
+			</div>
+		</article>
+	
+		<article class="post" itemscope itemscope="" itemtype="http://schema.org/Article">
+
+			<header class="post-header">
+				<h1 class="post-title" itemprop="name headline"><a href="https://datacenterjourney.com/2019/my-home-lab/">My Home Lab</a></h1>
+			</header>
+			<div class="post-content">
+				 
+				   
+       			 
+
+       			It&rsquo;s been a while since I had done much with my home lab and decided it was time to give it some much-needed attention. The last update it received was around the time that ESXi 6.5u1 was released. For those of you interested, I am currently running a Supermicro SYS-5028D-TN4T mini-tower running an Intel 8-core Xeon D-1540 processor with 128GB of memory. For network connectivity, it comes with 2x 10GbE and 2x 1GbE ports, and for storage, 4x 3.
+			</div>
+			<div class="post-footer">
+				<div class="post-meta">
+                <span class="post-time">
+                <time datetime=2019-10-01 itemprop="datePublished">1 October 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://datacenterjourney.com/categories/homelab/"> HomeLab </a>
+                        <a href="https://datacenterjourney.com/categories/life-lessons/"> Life Lessons </a>
+                        
+                </span>
+        </div>
+				
+			</div>
+		</article>
+	
+		<article class="post" itemscope itemscope="" itemtype="http://schema.org/Article">
+
+			<header class="post-header">
+				<h1 class="post-title" itemprop="name headline"><a href="https://datacenterjourney.com/2019/change-ucs-fi-ips/">Change UCS Fabric Interconnect IPs</a></h1>
+			</header>
+			<div class="post-content">
+				 
+				   
+       			 
+
+       			It doesn&rsquo;t often happen that you need to change the Management IP Addresses on Cisco UCS Fabric Interconnects once they are configured and placed into production. If you do have to change them for whatever reason, as I have had to in the past, I thought it would be good to post the process and commands here for reference. Make sure you replace any information located within the &lt; &gt; to the IP information of your Fabric Interconnects.
+			</div>
+			<div class="post-footer">
+				<div class="post-meta">
+                <span class="post-time">
+                <time datetime=2019-09-24 itemprop="datePublished">24 September 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://datacenterjourney.com/categories/ucs/"> UCS </a>
+                        
+                </span>
+        </div>
+				
+			</div>
+		</article>
+	
+		<article class="post" itemscope itemscope="" itemtype="http://schema.org/Article">
+
+			<header class="post-header">
+				<h1 class="post-title" itemprop="name headline"><a href="https://datacenterjourney.com/2019/project-pacific-announcement/">Project Pacific Announcement</a></h1>
+			</header>
+			<div class="post-content">
+				 
+				   
+       			 
+
+       			For those of you that haven&rsquo;t heard VMware made a few big announcements during this year&rsquo;s VMworld US. One of the more interesting to me was the announcement of Project Pacific. In my opinion, this has to be one of the more critical and landscape changing for system administrators and developers. Think of it as the next evolution of vSphere and a step ladder for organizations to be able to implement an application platform.
+			</div>
+			<div class="post-footer">
+				<div class="post-meta">
+                <span class="post-time">
+                <time datetime=2019-09-05 itemprop="datePublished">5 September 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://datacenterjourney.com/categories/vmware/"> VMware </a>
+                        <a href="https://datacenterjourney.com/categories/kubernetes/"> Kubernetes </a>
+                        
+                </span>
+        </div>
+				
+			</div>
+		</article>
+	
+		<article class="post" itemscope itemscope="" itemtype="http://schema.org/Article">
+
+			<header class="post-header">
+				<h1 class="post-title" itemprop="name headline"><a href="https://datacenterjourney.com/2019/first-it-job-helpdesk/">First IT Job - Helpdesk</a></h1>
+			</header>
+			<div class="post-content">
+				 
+				   
+       			 
+
+       			Picking up on my Datacenter Journey from the last post. Now came the thrill of starting to work in the IT field as a Helpdesk technician. Information Systems had been my area of study for the past four and a half years in college. Little did I know that much of what I had learned in school wouldn&rsquo;t benefit me much at the start of my career, but would prove valuable later on.
+			</div>
+			<div class="post-footer">
+				<div class="post-meta">
+                <span class="post-time">
+                <time datetime=2019-08-27 itemprop="datePublished">27 August 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://datacenterjourney.com/categories/journey/"> Journey </a>
+                        <a href="https://datacenterjourney.com/categories/life-lessons/"> Life Lessons </a>
+                        
+                </span>
+        </div>
+				
+			</div>
+		</article>
+	
+		<article class="post" itemscope itemscope="" itemtype="http://schema.org/Article">
+
+			<header class="post-header">
+				<h1 class="post-title" itemprop="name headline"><a href="https://datacenterjourney.com/2019/installing-powershell-core-macos/">Installing PowerShell Core - MacOS</a></h1>
+			</header>
+			<div class="post-content">
+				 
+				   
+       			 
+
+       			A thought occurred to me after my last post that there might be users out there that are new to macOS and PowerShell. So to help everyone out, I imagined it might be useful to explain how to install PowerShell on macOS. The task is two parts comprised of first installing Homebrew and then using Homebrew to install PowerShell.
+Installing Homebrew Open a terminal window and then run the following command at the prompt:
+			</div>
+			<div class="post-footer">
+				<div class="post-meta">
+                <span class="post-time">
+                <time datetime=2019-08-14 itemprop="datePublished">14 August 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://datacenterjourney.com/categories/macos/"> macOS </a>
+                        <a href="https://datacenterjourney.com/categories/powershell/"> Powershell </a>
+                        
+                </span>
+        </div>
+				
+			</div>
+		</article>
+	
+		<article class="post" itemscope itemscope="" itemtype="http://schema.org/Article">
+
+			<header class="post-header">
+				<h1 class="post-title" itemprop="name headline"><a href="https://datacenterjourney.com/2019/esxi-usb-installer-scripted-single/">ESXi USB Installer Scripted - Single</a></h1>
+			</header>
+			<div class="post-content">
+				 
+				   
+       			 
+
+       			In one of my previous posts, I shared the steps to manually configure a USB drive to create an unattended ESXi installation and have it install on itself. The process is not complicated and makes the installation of ESXi much quicker and zero-touch. The manual process of creating USB drives wasn&rsquo;t bad, but it wasn&rsquo;t very efficient and did not scale well. To be able to generate more than a few at a time turned out to be time-consuming.
+			</div>
+			<div class="post-footer">
+				<div class="post-meta">
+                <span class="post-time">
+                <time datetime=2019-08-12 itemprop="datePublished">12 August 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://datacenterjourney.com/categories/vmware/"> VMware </a>
+                        <a href="https://datacenterjourney.com/categories/esxi/"> ESXi </a>
+                        <a href="https://datacenterjourney.com/categories/automation/"> Automation </a>
+                        <a href="https://datacenterjourney.com/categories/macos/"> MacOS </a>
+                        <a href="https://datacenterjourney.com/categories/powershell/"> Powershell </a>
+                        
+                </span>
+        </div>
+				
+			</div>
+		</article>
+	
+		<article class="post" itemscope itemscope="" itemtype="http://schema.org/Article">
+
+			<header class="post-header">
+				<h1 class="post-title" itemprop="name headline"><a href="https://datacenterjourney.com/2019/esxi-usb-installer-manual/">ESXi USB Installer - Manual</a></h1>
+			</header>
+			<div class="post-content">
+				 
+				   
+       			 
+
+       			Recently I came across the need to install hundreds of ESXi hosts on USB sticks and wanted to accomplish this in the easiest way possible. While installing ESXi isn&rsquo;t complicated, it can be time-consuming and would require the need to be swapping the monitor and keyboard continually or having multiple monitors and keyboards. I wanted an unattended install method where I wouldn&rsquo;t need to continue to touch each machine and have to go back configure it.
+			</div>
+			<div class="post-footer">
+				<div class="post-meta">
+                <span class="post-time">
+                <time datetime=2019-07-28 itemprop="datePublished">28 July 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://datacenterjourney.com/categories/esxi/"> ESXi </a>
+                        <a href="https://datacenterjourney.com/categories/automation/"> Automation </a>
+                        <a href="https://datacenterjourney.com/categories/macos/"> MacOS </a>
+                        <a href="https://datacenterjourney.com/categories/bash/"> bash </a>
+                        
+                </span>
+        </div>
+				
+			</div>
+		</article>
+	
+		<article class="post" itemscope itemscope="" itemtype="http://schema.org/Article">
+
+			<header class="post-header">
+				<h1 class="post-title" itemprop="name headline"><a href="https://datacenterjourney.com/2019/journeystart/">Journey Start</a></h1>
+			</header>
+			<div class="post-content">
+				 
+				   
+       			 
+
+       			To give you a little bit of background on me and how I got started in my IT career back in 2002. As a recent college graduate with little to no experience and only armed with a bachelor degree in Management Information Systems, I thought the job offers were going to be plentiful for me to choose from just by applying. Little did I know that it was not as easy as listing the fact that I had a piece a paper showing that I could learn and pass tests.
+			</div>
+			<div class="post-footer">
+				<div class="post-meta">
+                <span class="post-time">
+                <time datetime=2019-06-04 itemprop="datePublished">4 June 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://datacenterjourney.com/categories/journey/"> Journey </a>
+                        <a href="https://datacenterjourney.com/categories/life-lessons/"> Life Lessons </a>
+                        
+                </span>
+        </div>
+				
+			</div>
+		</article>
+	
+		<article class="post" itemscope itemscope="" itemtype="http://schema.org/Article">
+
+			<header class="post-header">
+				<h1 class="post-title" itemprop="name headline"><a href="https://datacenterjourney.com/about/">About</a></h1>
+			</header>
+			<div class="post-content">
+				 
+				   
+       			 
+
+       			Welcome, my name is Manuel Martinez, and I&rsquo;m from Las Vegas, NV. I have been in the IT field since graduating from college back in 2002. I have worked my way up the ranks through the many positions I have held in different industries. This site is a collection of stories, notes, and information that I have gathered along the way that I hope helps others in the community along their journey.
+			</div>
+			<div class="post-footer">
+				<div class="post-meta">
+                <span class="post-time">
+                <time datetime=2019-06-01 itemprop="datePublished">1 June 2019</time>
+                </span>
+                in
+                
+        </div>
+				
+			</div>
+		</article>
+	
+
+	
+
+
+</div>
+
   
 
           </div>
