@@ -10,9 +10,9 @@
   
   
   
-  <link rel="prev" href="https://datacenterjourney.com/2019/send_f11_on_macos/" />
-  <link rel="next" href="https://datacenterjourney.com/2019/vcenter-6.5-vami-updates-fail-with-environment-not-ready/" />
-  <link rel="canonical" href="https://datacenterjourney.com/2019/powershell-cmdlet-conflicts/" />
+  <link rel="prev" href="https://datacenterjourney.com/2019/powershell-cmdlet-conflicts/" />
+  
+  <link rel="canonical" href="https://datacenterjourney.com/2019/vcenter-6.5-vami-updates-fail-with-environment-not-ready/" />
   <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -24,10 +24,10 @@
   <title>
        
        
-           PowerShell Cmdlet Conflicts | Datacenter Journey
+           vCenter 6.5 VAMI Updates Fail with Environment Not Ready | Datacenter Journey
        
   </title>
-  <meta name="title" content="PowerShell Cmdlet Conflicts | Datacenter Journey">
+  <meta name="title" content="vCenter 6.5 VAMI Updates Fail with Environment Not Ready | Datacenter Journey">
     
   
   <link rel="stylesheet" href="/font/iconfont.css">
@@ -35,17 +35,17 @@
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="PowerShell Cmdlet Conflicts"/>
-<meta name="twitter:description" content="Recently, I had something come up with a client who was migrating from Hyper-V to vSphere. One of the administrators is a big PowerShell user and brought to my attention that the Microsoft Hyper-V and VMware PowerCLI modules share some of the cmdlet names. Duplicate names become an issue when trying to manage particular objects like VMs since both modules have the Get-VM cmdlet. Due to this conflict, he removed the PowerCLI module to continue maintaining the Hyper-V servers."/>
+<meta name="twitter:title" content="vCenter 6.5 VAMI Updates Fail with Environment Not Ready"/>
+<meta name="twitter:description" content="In a previous post, I mentioned that it had been a while since I had logged into my lab environment, and it was time for some updates. I was running vCenter 6.5u1, and before going to 6.7 wanted to be on the latest release of 6.5. It also allowed me to document the process and share with others who might be inexperienced in how to perform updates from the VCSA (vCenter Server Appliance) VAMI (VMware Appliance Management Interface)."/>
 
   <script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "BlogPosting",
-  "headline": "PowerShell Cmdlet Conflicts",
+  "headline": "vCenter 6.5 VAMI Updates Fail with Environment Not Ready",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https:\/\/datacenterjourney.com\/2019\/powershell-cmdlet-conflicts\/"
+    "@id": "https:\/\/datacenterjourney.com\/2019\/vcenter-6.5-vami-updates-fail-with-environment-not-ready\/"
   },
   "image": {
     "@type": "ImageObject",
@@ -55,10 +55,10 @@
   },
   "genre": "posts",
   
-  "wordcount":  493 ,
-  "url": "https:\/\/datacenterjourney.com\/2019\/powershell-cmdlet-conflicts\/",
-  "datePublished": "2019-11-03T08:39:26-08:00",
-  "dateModified": "2019-11-03T08:39:26-08:00",
+  "wordcount":  416 ,
+  "url": "https:\/\/datacenterjourney.com\/2019\/vcenter-6.5-vami-updates-fail-with-environment-not-ready\/",
+  "datePublished": "2019-11-10T19:40:33-08:00",
+  "dateModified": "2019-11-10T19:40:33-08:00",
   
   "publisher": {
     "@type": "Organization",
@@ -130,22 +130,22 @@
       		
 <article class="post-warp">
     <header class="post-header">
-        <h1 class="post-title">PowerShell Cmdlet Conflicts</h1>
+        <h1 class="post-title">vCenter 6.5 VAMI Updates Fail with Environment Not Ready</h1>
         <div class="post-meta">
             Written by <a href="https://datacenterjourney.com" rel="author">Manuel Martinez</a> with ♥ 
                 <span class="post-time">
-                    on <time datetime=2019-11-03 >3 November 2019</time>
+                    on <time datetime=2019-11-10 >10 November 2019</time>
                 </span>
                 in
                 <i class="iconfont icon-folder"></i>
                 <span class="post-category">
-                        <a href="https://datacenterjourney.com/categories/powershell/"> PowerShell </a>
                         <a href="https://datacenterjourney.com/categories/vmware/"> VMware </a>
-                        <a href="https://datacenterjourney.com/categories/automation/"> Automation </a>
+                        <a href="https://datacenterjourney.com/categories/vcsa/"> VCSA </a>
+                        <a href="https://datacenterjourney.com/categories/homelab/"> HomeLab </a>
                         
                 </span>
                 <i class="iconfont icon-timer"></i>
-                3 min
+                2 min
         </div>
     </header>
     <div class="post-content">
@@ -164,52 +164,29 @@
           
           
 
-          <p>Recently, I had something come up with a client who was migrating from Hyper-V to vSphere. One of the administrators is a big PowerShell user and brought to my attention that the Microsoft Hyper-V and VMware PowerCLI modules share some of the cmdlet names. Duplicate names become an issue when trying to manage particular objects like VMs since both modules have the Get-VM cmdlet. Due to this conflict, he removed the PowerCLI module to continue maintaining the Hyper-V servers. I decided to do some testing and figure out how he would be able to have both modules and manage both environments with PowerShell.</p>
+          <p>In a previous post, I mentioned that it had been a while since I had logged into my lab environment, and it was time for some updates. I was running vCenter 6.5u1, and before going to 6.7 wanted to be on the latest release of 6.5. It also allowed me to document the process and share with others who might be inexperienced in how to perform updates from the VCSA (vCenter Server Appliance) VAMI (VMware Appliance Management Interface). Unbeknown to me, the process would fail, and I would also be troubleshooting and documenting the process to resolve the issue as well.</p>
 
-<p>First, I installed both Modules on my Windows machine to try and replicate the issue my client was having. Then, I verified that both modules were present by running the following command.</p>
+<p>After logging into the vCenter VAMI and checking the repository for updates, it found the update to bring the VCSA from 6.5u1 to 6.5u3. Selecting to &ldquo;Install All Updates&rdquo; and then clicking &ldquo;Accept&rdquo; on the EULA, the VCSA started installing the update. However, the updates didn&rsquo;t begin and stalled at 0%. A message displayed stating, &ldquo;Environment is not ready to be updated.&rdquo; Clicking on &ldquo;Show Details&rdquo; presented additional information as to why it was not ready to install updates. There was a message that said, &ldquo;Appliance (OS) root password is expired or is going to expire soon. Please change the root password before installing an update.&rdquo;</p>
 
-<pre><code class="language-PowerShell">Get-Module -ListAvailable | Where-Object {($_.Name -match 'Hyper-V') -or ($_.Name -match 'VMware.VimAutomation.Core')}
-</code></pre>
+<p><img src = "/images/2019/2019-11/VCSAfailed05.png"></img>
+<br>
+<img src = "/images/2019/2019-11/VCSAfailed06.png"></img></p>
 
-<p><img src = "/images/2019/2019-11/CmdletConflict1.png"></img></p>
+<p>Going to the Administration section and trying to set the root password not to expire gave an error stating, &ldquo;Permission Denied.&rdquo; Attempting to change the root password also failed with the error message &ldquo;Could not set the password.&rdquo;</p>
 
-<p>Now, he stated that when he runs the command <code>Get-VM</code> against vSphere, it tries to run the Hyper-V cmdlet. When I run the command <code>Get-Command Get-VM</code>, I get the following result showing that it will run the cmdlet for the PowerCLI Module. The reason is that the PowerCLI module is the one only one imported when starting PowerShell.</p>
+<p><img src = "/images/2019/2019-11/VCSAfailed08.png"></img>
+<br>
+<img src = "/images/2019/2019-11/VCSAfailed07.png"></img></p>
 
-<p><img src = "/images/2019/2019-11/CmdletConflict2.png"></img>
-<img src = "/images/2019/2019-11/CmdletConflict3.png"></img></p>
+<p>Knowing the current root password makes this an easy issue to resolve, but it requires logging into the appliance via the console or SSH. Once successfully logged in, you will need to type in <code>shell</code> to launch the BASH interface. To change the password type in <code>passwd</code> and then type in the new password to use twice. If done correctly, you will receive a message that &ldquo;password updated successfully.&rdquo; If you want to verify the change, you can type in <code>chage -l root</code>, and it will present the password information in the screenshot below.</p>
 
-<p>Once I import the Hyper-V module and rerun the command to above now, it shows that it will run the Hyper-V cmdlet.</p>
+<p><img src = "/images/2019/2019-11/VCSAfailed09.png"></img></p>
 
-<pre><code class="language-Powershell">Import-Module -Name Hyper-V
-Get-Command Get-VM
-</code></pre>
+<p>Logging back into the VAMI and trying to &ldquo;Install All Updates&rdquo; again will now proceed with the installation. After about 15-20 minutes, the updates should complete and give you a message stating, &ldquo;Packages upgraded successfully, reboot is required to complete installation.&rdquo; Going to the Summary section, click on &ldquo;Reboot&rdquo; then on &ldquo;OK&rdquo; to proceed with the system reboot. After rebooting, log back in to check for additional updates, and if there are none, the update is complete.</p>
 
-<p><img src = "/images/2019/2019-11/CmdletConflict4.png"></img></p>
-
-<p>However, when I run the command <code>Get-Command Get-VM -All</code> now, it shows that I have two cmdlets with the same name for different modules. The reason that it will run the Hyper-V cmdlet let when both modules are present is because it searches in alphabetical order. This has to be the reason my client was having the issue with the <code>Get-VM</code> command running the Hyper-V cmdlet instead of the PowerCLI one he was trying to run.</p>
-
-<p><img src = "/images/2019/2019-11/CmdletConflict5.png"></img></p>
-
-<p>There are two solutions I&rsquo;m going to demonstrate work regardless of which cmdlet takes precedence. The first way is to include the module name as a path before the cmdlet. This method can become quite cumbersome to type every time, especially if you want to run the PowerCLI cmdlets.</p>
-
-<pre><code class="language-PowerShell">Hyper-V\Get-VM
-VMware.VimAutomation.Core\Get-VM
-</code></pre>
-
-<p>The second solution is to include a custom prefix when importing the modules with the commands below in a new PowerShell session. Then you can verify that they were imported successfully by running the last command to show them.</p>
-
-<pre><code class="language-PowerShell">Import-Module -Name VMware.VimAutomation.Core -Prefix VMW
-Import-Module -Name Hyper-V -Prefix MS
-Get-Command Get-*VM
-</code></pre>
-
-<p><img src = "/images/2019/2019-11/CmdletConflict6.png"></img></p>
-
-<p>I did notice something interesting when importing the modules with the custom prefixes in my new session when running the <code>Get-Command Get-VM</code> and <code>Get-Command Get-VM -All</code>. It shows once again only the cmdlets for PowerCLI.</p>
-
-<p><img src = "/images/2019/2019-11/CmdletConflict7.png"></img></p>
-
-<p>I hope this is useful to others that might encounter an issue with two different modules with conflicting cmdlet names. This issue brings up an important consideration when creating your custom modules, to make sure you use unique cmdlet names. Leave me a comment if you found this helpful.</p>
+<p><img src = "/images/2019/2019-11/VCSAfailed15.png"></img>
+<br>
+<img src = "/images/2019/2019-11/VCSAfailed18.png"></img></p>
 
     </div>
 
@@ -223,7 +200,7 @@ Get-Command Get-*VM
            
             <p class="copyright-item">
                     <span>Words:</span>
-                   <span>493</span>
+                   <span>416</span>
             </p>
             
             <p class="copyright-item">
@@ -232,7 +209,7 @@ Get-Command Get-*VM
                 <span>
 
       
-        <a href="//twitter.com/share?url=https%3a%2f%2fdatacenterjourney.com%2f2019%2fpowershell-cmdlet-conflicts%2f&amp;text=PowerShell%20Cmdlet%20Conflicts&amp;via=ManuelM_IT" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fdatacenterjourney.com%2f2019%2fvcenter-6.5-vami-updates-fail-with-environment-not-ready%2f&amp;text=vCenter%206.5%20VAMI%20Updates%20Fail%20with%20Environment%20Not%20Ready&amp;via=ManuelM_IT" target="_blank" title="Share on Twitter">
           <i class="iconfont icon-twitter"></i>
         </a>
         
@@ -242,7 +219,7 @@ Get-Command Get-*VM
       
       
       
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fdatacenterjourney.com%2f2019%2fpowershell-cmdlet-conflicts%2f&amp;title=PowerShell%20Cmdlet%20Conflicts" target="_blank" title="Share on LinkedIn">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fdatacenterjourney.com%2f2019%2fvcenter-6.5-vami-updates-fail-with-environment-not-ready%2f&amp;title=vCenter%206.5%20VAMI%20Updates%20Fail%20with%20Environment%20Not%20Ready" target="_blank" title="Share on LinkedIn">
           <i class="iconfont icon-linkedin"></i>
         </a>
         
@@ -282,10 +259,8 @@ Get-Command Get-*VM
 
     <div class="post-nav">
         
-        <a href="https://datacenterjourney.com/2019/send_f11_on_macos/" class="prev" rel="prev" title="Send F11 Key on macOS"><i class="iconfont icon-dajiantou"></i>&nbsp;Send F11 Key on macOS</a>
+        <a href="https://datacenterjourney.com/2019/powershell-cmdlet-conflicts/" class="prev" rel="prev" title="PowerShell Cmdlet Conflicts"><i class="iconfont icon-dajiantou"></i>&nbsp;PowerShell Cmdlet Conflicts</a>
          
-        
-        <a href="https://datacenterjourney.com/2019/vcenter-6.5-vami-updates-fail-with-environment-not-ready/" class="next" rel="next" title="vCenter 6.5 VAMI Updates Fail with Environment Not Ready">vCenter 6.5 VAMI Updates Fail with Environment Not Ready&nbsp;<i class="iconfont icon-xiaojiantou"></i></a>
         
     </div>
 

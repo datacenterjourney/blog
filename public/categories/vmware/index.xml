@@ -6,10 +6,19 @@
     <description>Recent content in VMware on Datacenter Journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 03 Nov 2019 08:39:26 -0800</lastBuildDate>
+    <lastBuildDate>Sun, 10 Nov 2019 19:40:33 -0800</lastBuildDate>
     
 	<atom:link href="https://datacenterjourney.com/categories/vmware/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>vCenter 6.5 VAMI Updates Fail with Environment Not Ready</title>
+      <link>https://datacenterjourney.com/2019/vcenter-6.5-vami-updates-fail-with-environment-not-ready/</link>
+      <pubDate>Sun, 10 Nov 2019 19:40:33 -0800</pubDate>
+      
+      <guid>https://datacenterjourney.com/2019/vcenter-6.5-vami-updates-fail-with-environment-not-ready/</guid>
+      <description>In a previous post, I mentioned that it had been a while since I had logged into my lab environment, and it was time for some updates. I was running vCenter 6.5u1, and before going to 6.7 wanted to be on the latest release of 6.5. It also allowed me to document the process and share with others who might be inexperienced in how to perform updates from the VCSA (vCenter Server Appliance) VAMI (VMware Appliance Management Interface).</description>
+    </item>
     
     <item>
       <title>PowerShell Cmdlet Conflicts</title>

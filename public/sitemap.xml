@@ -2,21 +2,9 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
-      <loc>https://datacenterjourney.com/categories/automation/</loc>
-      
-      <lastmod>2019-11-03T08:39:26-08:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
       <loc>https://datacenterjourney.com/categories/</loc>
       
-      <lastmod>2019-11-03T08:39:26-08:00</lastmod>
+      <lastmod>2019-11-10T19:40:33-08:00</lastmod>
       
       
       
@@ -28,7 +16,19 @@
     <url>
       <loc>https://datacenterjourney.com/</loc>
       
-      <lastmod>2019-11-03T08:39:26-08:00</lastmod>
+      <lastmod>2019-11-10T19:40:33-08:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://datacenterjourney.com/categories/homelab/</loc>
+      
+      <lastmod>2019-11-10T19:40:33-08:00</lastmod>
       
       
       
@@ -40,7 +40,7 @@
     <url>
       <loc>https://datacenterjourney.com/posts/</loc>
       
-      <lastmod>2019-11-03T08:39:26-08:00</lastmod>
+      <lastmod>2019-11-10T19:40:33-08:00</lastmod>
       
       
       
@@ -50,7 +50,45 @@
     </url>
   
     <url>
-      <loc>https://datacenterjourney.com/categories/powershell/</loc>
+      <loc>https://datacenterjourney.com/categories/vcsa/</loc>
+      
+      <lastmod>2019-11-10T19:40:33-08:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://datacenterjourney.com/categories/vmware/</loc>
+      
+      <lastmod>2019-11-10T19:40:33-08:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://datacenterjourney.com/2019/vcenter-6.5-vami-updates-fail-with-environment-not-ready/</loc>
+      
+      <lastmod>2019-11-10T19:40:33-08:00</lastmod>
+      
+      
+      <changefreq>monthly</changefreq>
+      
+      
+      <priority>0.5</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://datacenterjourney.com/categories/automation/</loc>
       
       <lastmod>2019-11-03T08:39:26-08:00</lastmod>
       
@@ -76,7 +114,7 @@
     </url>
   
     <url>
-      <loc>https://datacenterjourney.com/categories/vmware/</loc>
+      <loc>https://datacenterjourney.com/categories/powershell/</loc>
       
       <lastmod>2019-11-03T08:39:26-08:00</lastmod>
       
@@ -89,6 +127,18 @@
   
     <url>
       <loc>https://datacenterjourney.com/categories/esxi/</loc>
+      
+      <lastmod>2019-10-22T19:51:06-07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://datacenterjourney.com/categories/macos/</loc>
       
       <lastmod>2019-10-22T19:51:06-07:00</lastmod>
       
@@ -117,30 +167,6 @@
       <loc>https://datacenterjourney.com/categories/ucs/</loc>
       
       <lastmod>2019-10-22T19:51:06-07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://datacenterjourney.com/categories/macos/</loc>
-      
-      <lastmod>2019-10-22T19:51:06-07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://datacenterjourney.com/categories/homelab/</loc>
-      
-      <lastmod>2019-10-03T21:33:40-07:00</lastmod>
       
       
       

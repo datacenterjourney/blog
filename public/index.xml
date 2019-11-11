@@ -5,8 +5,40 @@
     <description>Recent content in Datacenter Journey on Datacenter Journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 03 Nov 2019 08:39:26 -0800</lastBuildDate>
+    <lastBuildDate>Sun, 10 Nov 2019 19:40:33 -0800</lastBuildDate>
     <atom:link href="https://datacenterjourney.com/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>vCenter 6.5 VAMI Updates Fail with Environment Not Ready</title>
+      <link>https://datacenterjourney.com/2019/vcenter-6.5-vami-updates-fail-with-environment-not-ready/</link>
+      <pubDate>Sun, 10 Nov 2019 19:40:33 -0800</pubDate>
+      
+      <guid>https://datacenterjourney.com/2019/vcenter-6.5-vami-updates-fail-with-environment-not-ready/</guid>
+      <description>&lt;p&gt;In a previous post, I mentioned that it had been a while since I had logged into my lab environment, and it was time for some updates. I was running vCenter 6.5u1, and before going to 6.7 wanted to be on the latest release of 6.5. It also allowed me to document the process and share with others who might be inexperienced in how to perform updates from the VCSA (vCenter Server Appliance) VAMI (VMware Appliance Management Interface). Unbeknown to me, the process would fail, and I would also be troubleshooting and documenting the process to resolve the issue as well.&lt;/p&gt;
+
+&lt;p&gt;After logging into the vCenter VAMI and checking the repository for updates, it found the update to bring the VCSA from 6.5u1 to 6.5u3. Selecting to &amp;ldquo;Install All Updates&amp;rdquo; and then clicking &amp;ldquo;Accept&amp;rdquo; on the EULA, the VCSA started installing the update. However, the updates didn&amp;rsquo;t begin and stalled at 0%. A message displayed stating, &amp;ldquo;Environment is not ready to be updated.&amp;rdquo; Clicking on &amp;ldquo;Show Details&amp;rdquo; presented additional information as to why it was not ready to install updates. There was a message that said, &amp;ldquo;Appliance (OS) root password is expired or is going to expire soon. Please change the root password before installing an update.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src = &#34;/images/2019/2019-11/VCSAfailed05.png&#34;&gt;&lt;/img&gt;
+&lt;br&gt;
+&lt;img src = &#34;/images/2019/2019-11/VCSAfailed06.png&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+
+&lt;p&gt;Going to the Administration section and trying to set the root password not to expire gave an error stating, &amp;ldquo;Permission Denied.&amp;rdquo; Attempting to change the root password also failed with the error message &amp;ldquo;Could not set the password.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src = &#34;/images/2019/2019-11/VCSAfailed08.png&#34;&gt;&lt;/img&gt;
+&lt;br&gt;
+&lt;img src = &#34;/images/2019/2019-11/VCSAfailed07.png&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+
+&lt;p&gt;Knowing the current root password makes this an easy issue to resolve, but it requires logging into the appliance via the console or SSH. Once successfully logged in, you will need to type in &lt;code&gt;shell&lt;/code&gt; to launch the BASH interface. To change the password type in &lt;code&gt;passwd&lt;/code&gt; and then type in the new password to use twice. If done correctly, you will receive a message that &amp;ldquo;password updated successfully.&amp;rdquo; If you want to verify the change, you can type in &lt;code&gt;chage -l root&lt;/code&gt;, and it will present the password information in the screenshot below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src = &#34;/images/2019/2019-11/VCSAfailed09.png&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+
+&lt;p&gt;Logging back into the VAMI and trying to &amp;ldquo;Install All Updates&amp;rdquo; again will now proceed with the installation. After about 15-20 minutes, the updates should complete and give you a message stating, &amp;ldquo;Packages upgraded successfully, reboot is required to complete installation.&amp;rdquo; Going to the Summary section, click on &amp;ldquo;Reboot&amp;rdquo; then on &amp;ldquo;OK&amp;rdquo; to proceed with the system reboot. After rebooting, log back in to check for additional updates, and if there are none, the update is complete.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src = &#34;/images/2019/2019-11/VCSAfailed15.png&#34;&gt;&lt;/img&gt;
+&lt;br&gt;
+&lt;img src = &#34;/images/2019/2019-11/VCSAfailed18.png&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>PowerShell Cmdlet Conflicts</title>
