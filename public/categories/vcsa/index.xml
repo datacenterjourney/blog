@@ -6,10 +6,20 @@
     <description>Recent content in VCSA on Datacenter Journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 10 Nov 2019 19:40:33 -0800</lastBuildDate>
+    <lastBuildDate>Thu, 05 Dec 2019 21:29:20 -0800</lastBuildDate>
     
 	<atom:link href="https://datacenterjourney.com/categories/vcsa/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Repoint VCSA to Different PSC</title>
+      <link>https://datacenterjourney.com/2019/repoint-vcsa-to-different-psc/</link>
+      <pubDate>Thu, 05 Dec 2019 21:29:20 -0800</pubDate>
+      
+      <guid>https://datacenterjourney.com/2019/repoint-vcsa-to-different-psc/</guid>
+      <description>To repoint your vCenter Server Appliance (VCSA) to a different Platform Services Controller (PSC), you will need to use the cmsso-util repoint command. Using this process is for several different scenarios, including freeing up the capacity load, PSC maintenance, decommissioning a PSC, and various others.
+To start, verify what PSC the VCSA is currently pointing to by logging into the VCSA and starting the Bash shell. Then run the command below to check what PSC is currently in use.</description>
+    </item>
     
     <item>
       <title>vCenter 6.5 VAMI Updates Fail with Environment Not Ready</title>
