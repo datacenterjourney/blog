@@ -6,7 +6,7 @@
     <description>Recent content in Categories on Datacenter Journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Dec 2019 21:29:20 -0800</lastBuildDate>
+    <lastBuildDate>Sun, 08 Dec 2019 22:54:33 -0800</lastBuildDate>
     
 	<atom:link href="https://datacenterjourney.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>HomeLab</title>
       <link>https://datacenterjourney.com/categories/homelab/</link>
-      <pubDate>Thu, 05 Dec 2019 21:29:20 -0800</pubDate>
+      <pubDate>Sun, 08 Dec 2019 22:54:33 -0800</pubDate>
       
       <guid>https://datacenterjourney.com/categories/homelab/</guid>
       <description></description>
@@ -23,7 +23,7 @@
     <item>
       <title>VCSA</title>
       <link>https://datacenterjourney.com/categories/vcsa/</link>
-      <pubDate>Thu, 05 Dec 2019 21:29:20 -0800</pubDate>
+      <pubDate>Sun, 08 Dec 2019 22:54:33 -0800</pubDate>
       
       <guid>https://datacenterjourney.com/categories/vcsa/</guid>
       <description></description>
@@ -32,7 +32,7 @@
     <item>
       <title>VMware</title>
       <link>https://datacenterjourney.com/categories/vmware/</link>
-      <pubDate>Thu, 05 Dec 2019 21:29:20 -0800</pubDate>
+      <pubDate>Sun, 08 Dec 2019 22:54:33 -0800</pubDate>
       
       <guid>https://datacenterjourney.com/categories/vmware/</guid>
       <description></description>
@@ -48,7 +48,7 @@
     </item>
     
     <item>
-      <title>PowerShell</title>
+      <title>Powershell</title>
       <link>https://datacenterjourney.com/categories/powershell/</link>
       <pubDate>Sun, 03 Nov 2019 08:39:26 -0800</pubDate>
       

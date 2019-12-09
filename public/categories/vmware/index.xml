@@ -6,10 +6,19 @@
     <description>Recent content in VMware on Datacenter Journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Dec 2019 21:29:20 -0800</lastBuildDate>
+    <lastBuildDate>Sun, 08 Dec 2019 22:54:33 -0800</lastBuildDate>
     
 	<atom:link href="https://datacenterjourney.com/categories/vmware/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Decommission 6.7 Additional External Platform Services Controller(s) (PSC)</title>
+      <link>https://datacenterjourney.com/2019/decom-external-psc-6.7/</link>
+      <pubDate>Sun, 08 Dec 2019 22:54:33 -0800</pubDate>
+      
+      <guid>https://datacenterjourney.com/2019/decom-external-psc-6.7/</guid>
+      <description>Back when I deployed my vSphere 6.5 environment in my lab, I wanted to be able to set up Enhanced Link Mode (ELM). To do that, you needed to have an external Platform Services Controller (PSC), but that is no longer the case. Starting in an early version of 6.7, you are now able to connect multiple vCenters in ELM without having to deploy an external PSC. Based on the design recommendations back in 6.</description>
+    </item>
     
     <item>
       <title>Repoint VCSA to Different PSC</title>
