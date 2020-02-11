@@ -6,10 +6,28 @@
     <description>Recent content in Categories on Datacenter Journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 08 Dec 2019 22:54:33 -0800</lastBuildDate>
+    <lastBuildDate>Mon, 10 Feb 2020 18:54:20 -0700</lastBuildDate>
     
 	<atom:link href="https://datacenterjourney.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Journey</title>
+      <link>https://datacenterjourney.com/categories/journey/</link>
+      <pubDate>Mon, 10 Feb 2020 18:54:20 -0700</pubDate>
+      
+      <guid>https://datacenterjourney.com/categories/journey/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Life Lessons</title>
+      <link>https://datacenterjourney.com/categories/life-lessons/</link>
+      <pubDate>Mon, 10 Feb 2020 18:54:20 -0700</pubDate>
+      
+      <guid>https://datacenterjourney.com/categories/life-lessons/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>HomeLab</title>
@@ -48,7 +66,7 @@
     </item>
     
     <item>
-      <title>PowerShell</title>
+      <title>Powershell</title>
       <link>https://datacenterjourney.com/categories/powershell/</link>
       <pubDate>Sun, 03 Nov 2019 08:39:26 -0800</pubDate>
       
@@ -84,29 +102,11 @@
     </item>
     
     <item>
-      <title>Life Lessons</title>
-      <link>https://datacenterjourney.com/categories/life-lessons/</link>
-      <pubDate>Tue, 01 Oct 2019 21:27:30 -0700</pubDate>
-      
-      <guid>https://datacenterjourney.com/categories/life-lessons/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Kubernetes</title>
       <link>https://datacenterjourney.com/categories/kubernetes/</link>
       <pubDate>Thu, 05 Sep 2019 21:10:43 -0700</pubDate>
       
       <guid>https://datacenterjourney.com/categories/kubernetes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Journey</title>
-      <link>https://datacenterjourney.com/categories/journey/</link>
-      <pubDate>Tue, 27 Aug 2019 10:01:18 -0700</pubDate>
-      
-      <guid>https://datacenterjourney.com/categories/journey/</guid>
       <description></description>
     </item>
     
