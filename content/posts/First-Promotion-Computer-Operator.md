@@ -1,5 +1,5 @@
 ---
-title: "First Promotion Computer Operator"
+title: "First Promotion - Computer Operator"
 date: 2020-02-10T18:54:20-07:00
 draft: false
 description: [My first IT promotion and how it came about]

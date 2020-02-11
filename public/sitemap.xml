@@ -166,6 +166,18 @@
     </url>
   
     <url>
+      <loc>https://datacenterjourney.com/categories/powershell/</loc>
+      
+      <lastmod>2019-11-03T08:39:26-08:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
       <loc>https://datacenterjourney.com/2019/powershell-cmdlet-conflicts/</loc>
       
       <lastmod>2019-11-03T08:39:26-08:00</lastmod>
@@ -180,31 +192,7 @@
     </url>
   
     <url>
-      <loc>https://datacenterjourney.com/categories/powershell/</loc>
-      
-      <lastmod>2019-11-03T08:39:26-08:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
       <loc>https://datacenterjourney.com/categories/esxi/</loc>
-      
-      <lastmod>2019-10-22T19:51:06-07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://datacenterjourney.com/categories/macos/</loc>
       
       <lastmod>2019-10-22T19:51:06-07:00</lastmod>
       
@@ -231,6 +219,18 @@
   
     <url>
       <loc>https://datacenterjourney.com/categories/ucs/</loc>
+      
+      <lastmod>2019-10-22T19:51:06-07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://datacenterjourney.com/categories/macos/</loc>
       
       <lastmod>2019-10-22T19:51:06-07:00</lastmod>
       
