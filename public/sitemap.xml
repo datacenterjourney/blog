@@ -4,7 +4,7 @@
     <url>
       <loc>https://datacenterjourney.com/categories/</loc>
       
-      <lastmod>2020-02-10T18:54:20-07:00</lastmod>
+      <lastmod>2020-02-18T13:55:10-08:00</lastmod>
       
       
       
@@ -14,9 +14,59 @@
     </url>
   
     <url>
+      <loc>https://datacenterjourney.com/2020/change-macos-screenshot-defaults/</loc>
+      
+      <lastmod>2020-02-18T13:55:10-08:00</lastmod>
+      
+      
+      <changefreq>monthly</changefreq>
+      
+      
+      <priority>0.5</priority>
+      
+      
+    </url>
+  
+    <url>
       <loc>https://datacenterjourney.com/</loc>
       
-      <lastmod>2020-02-10T18:54:20-07:00</lastmod>
+      <lastmod>2020-02-18T13:55:10-08:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://datacenterjourney.com/posts/</loc>
+      
+      <lastmod>2020-02-18T13:55:10-08:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://datacenterjourney.com/categories/bash/</loc>
+      
+      <lastmod>2020-02-18T13:55:10-08:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://datacenterjourney.com/categories/macos/</loc>
+      
+      <lastmod>2020-02-18T13:55:10-08:00</lastmod>
       
       
       
@@ -53,18 +103,6 @@
   
     <url>
       <loc>https://datacenterjourney.com/categories/life-lessons/</loc>
-      
-      <lastmod>2020-02-10T18:54:20-07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://datacenterjourney.com/posts/</loc>
       
       <lastmod>2020-02-10T18:54:20-07:00</lastmod>
       
@@ -166,18 +204,6 @@
     </url>
   
     <url>
-      <loc>https://datacenterjourney.com/categories/powershell/</loc>
-      
-      <lastmod>2019-11-03T08:39:26-08:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
       <loc>https://datacenterjourney.com/2019/powershell-cmdlet-conflicts/</loc>
       
       <lastmod>2019-11-03T08:39:26-08:00</lastmod>
@@ -187,6 +213,18 @@
       
       
       <priority>0.5</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://datacenterjourney.com/categories/powershell/</loc>
+      
+      <lastmod>2019-11-03T08:39:26-08:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
       
       
     </url>
@@ -219,18 +257,6 @@
   
     <url>
       <loc>https://datacenterjourney.com/categories/ucs/</loc>
-      
-      <lastmod>2019-10-22T19:51:06-07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://datacenterjourney.com/categories/macos/</loc>
       
       <lastmod>2019-10-22T19:51:06-07:00</lastmod>
       
@@ -361,18 +387,6 @@
       
       
       <priority>0.5</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://datacenterjourney.com/categories/bash/</loc>
-      
-      <lastmod>2019-07-28T05:06:05-07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
       
       
     </url>

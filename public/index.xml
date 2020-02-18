@@ -5,8 +5,37 @@
     <description>Recent content in Datacenter Journey on Datacenter Journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 10 Feb 2020 18:54:20 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 18 Feb 2020 13:55:10 -0800</lastBuildDate>
     <atom:link href="https://datacenterjourney.com/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Change MacOS Screenshot Defaults</title>
+      <link>https://datacenterjourney.com/2020/change-macos-screenshot-defaults/</link>
+      <pubDate>Tue, 18 Feb 2020 13:55:10 -0800</pubDate>
+      
+      <guid>https://datacenterjourney.com/2020/change-macos-screenshot-defaults/</guid>
+      <description>
+
+&lt;p&gt;I&amp;rsquo;ve been taking lots of screenshots lately for blog posts and find myself constantly updating the files and locations. I&amp;rsquo;m not a fan of having to repeatedly rename multiple files or move them into the appropriate folder locations to keep them organized. The process is time-consuming, and since I don&amp;rsquo;t always write the blog post after performing the actions, it can lead to confusion. I did some searching and found that it&amp;rsquo;s straightforward to change the default location and name of screenshot files take with a Mac. Rather than have to look for this information every time I need to do it decided it would be helpful to me and possibly others to write a quick post on the steps.&lt;/p&gt;
+
+&lt;p&gt;Before changing the default location from the Desktop to a location of your choosing, the folder must exist before making the change. Also, be aware that if you delete or move the new screenshots folder, it can cause issues. If you are changing just the default name and not the folder location, then you don&amp;rsquo;t have to worry about folders.&lt;/p&gt;
+
+&lt;h4 id=&#34;changing-the-default-file-name-of-screenshots&#34;&gt;Changing the default file name of screenshots&lt;/h4&gt;
+
+&lt;p&gt;Open Terminal and type the commands listed below. Make sure to replace the text between the quotes &amp;ldquo; &amp;rdquo; with the new default name you want to assign. Once that is completed, you must restart the SystemUIServer process by running the &lt;code&gt;killall&lt;/code&gt; command. Now any new screenshots taken are saved with the new default name prefix instead of &amp;ldquo;Screen Shot.&amp;rdquo;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;defaults write com.apple.screencapture name &amp;quot;HomeLab&amp;quot;
+ killall SystemUIServer
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;changing-the-default-file-location-of-screenshots&#34;&gt;Changing the default file location of screenshots&lt;/h4&gt;
+
+&lt;p&gt;Remember that the directory location must exist before changing the default path as the command does not create it for you. If Terminal is not already open, you need to open it and run the subsequent commands. Make sure to change the directory path after &amp;ldquo;location&amp;rdquo; with the folder you want to set.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;defaults write com.apple.screencapture location ~/Documents/Blog/macOS
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>First Promotion - Computer Operator</title>
@@ -623,22 +652,6 @@ nano /Volumes/ESXI-6-7-U2/EFI/BOOT/BOOT.CFG
 
 &lt;p&gt;&lt;br&gt;
 You now have a fully configured unattended USB ESXi installation drive. All that is left to do is plug in the USB drive to the hardware you want to configure and power it on. I hope this helps you and ultimately saves you time when having to install ESXi on multiple hosts.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Journey Start</title>
-      <link>https://datacenterjourney.com/2019/journeystart/</link>
-      <pubDate>Tue, 04 Jun 2019 17:14:24 -0700</pubDate>
-      
-      <guid>https://datacenterjourney.com/2019/journeystart/</guid>
-      <description>&lt;p&gt;To give you a little bit of background on me and how I got started in my IT  career back in 2002. As a recent college graduate with little to no experience and only armed with a bachelor degree in Management Information Systems, I thought the job offers were going to be plentiful for me to choose from just by applying. Little did I know that it was not as easy as listing the fact that I had a piece a paper showing that I could learn and pass tests. After just a few months of job searching, I was made aware of an essential skill that I would need if I were to progress. It was the fact that to get anywhere in my future career that I would have to start networking and building relationships.&lt;/p&gt;
-
-&lt;p&gt;A friend of mine who worked at the Fremont Hotel &amp;amp; Casino, as a banquet supervisor, reached out to me letting me know that he wanted to introduce me to someone who might be able to help me get into an IT position. The person he had me meet with was the cage cashier manager. I thought to myself, how is she going to help get me into IT??? Not having any success on my own trying to land a job I decided to meet with her and hear what she had to tell me. It turns out that she had become good friends with the manager of the helpdesk for Boyd Gaming. What she was offering me was a position to work for her in the cage, and after six months, she would help me apply for a transfer to the corporate helpdesk. The catch was that there was no guarantee as to when or if there would be an open position once I was eligible, and she would be taking note of my work ethic and personality.&lt;/p&gt;
-
-&lt;p&gt;I decided to take a chance on the offer and start my position as a cage cashier. It couldn&amp;rsquo;t be harder than my current job, which was working at my dad&amp;rsquo;s company doing masonry work.  I kept a constant eye on the internal job postings, and after just eight months as a cashier, there was an opening at the helpdesk. True to her word, the cage manager helped me apply for the transfer and gave a great reference based on my work ethic and personality. I was scheduled for an interview during which I was able to convey to Theresa, the helpdesk manager, that I would be a good fit for the position. She felt confident enough that I would be able to do well in the role and decided to hire me and be able to prove her right.&lt;/p&gt;
-
-&lt;p&gt;The lessons learned here are something that I feel cannot be stressed enough. First, take the time to make and grow your personal and professional network of contacts because you never know when they might be able to help you out. However, don&amp;rsquo;t build these relationships for the sole purpose of trying to get ahead. Next, always work hard no matter what the task at hand. People will take notice of your work ethic, and it goes a long way towards building your reputation. Lastly, there will be times when you feel like nothing is going in your favor. Be persistent and never give up. I believe that life like baseball is a game of failure. Most of the time, things won&amp;rsquo;t go your way just because you want them to. It&amp;rsquo;s how you handle those failures and learn from them that will help you grow as a person and a professional.&lt;/p&gt;
 </description>
     </item>
     

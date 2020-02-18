@@ -6,10 +6,28 @@
     <description>Recent content in Categories on Datacenter Journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 10 Feb 2020 18:54:20 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 18 Feb 2020 13:55:10 -0800</lastBuildDate>
     
 	<atom:link href="https://datacenterjourney.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>bash</title>
+      <link>https://datacenterjourney.com/categories/bash/</link>
+      <pubDate>Tue, 18 Feb 2020 13:55:10 -0800</pubDate>
+      
+      <guid>https://datacenterjourney.com/categories/bash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>macOS</title>
+      <link>https://datacenterjourney.com/categories/macos/</link>
+      <pubDate>Tue, 18 Feb 2020 13:55:10 -0800</pubDate>
+      
+      <guid>https://datacenterjourney.com/categories/macos/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Journey</title>
@@ -66,7 +84,7 @@
     </item>
     
     <item>
-      <title>PowerShell</title>
+      <title>Powershell</title>
       <link>https://datacenterjourney.com/categories/powershell/</link>
       <pubDate>Sun, 03 Nov 2019 08:39:26 -0800</pubDate>
       
@@ -93,29 +111,11 @@
     </item>
     
     <item>
-      <title>macOS</title>
-      <link>https://datacenterjourney.com/categories/macos/</link>
-      <pubDate>Tue, 22 Oct 2019 19:51:06 -0700</pubDate>
-      
-      <guid>https://datacenterjourney.com/categories/macos/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Kubernetes</title>
       <link>https://datacenterjourney.com/categories/kubernetes/</link>
       <pubDate>Thu, 05 Sep 2019 21:10:43 -0700</pubDate>
       
       <guid>https://datacenterjourney.com/categories/kubernetes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>bash</title>
-      <link>https://datacenterjourney.com/categories/bash/</link>
-      <pubDate>Sun, 28 Jul 2019 05:06:05 -0700</pubDate>
-      
-      <guid>https://datacenterjourney.com/categories/bash/</guid>
       <description></description>
     </item>
     
