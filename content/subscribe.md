@@ -1,6 +1,6 @@
 +++
 title = "Subscribe"
-aliases = ["subscription"]
+aliases = ["Subscribe"]
 [ author ]
   name = "Manuel Martinez"
 +++
