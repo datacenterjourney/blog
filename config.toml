@@ -40,6 +40,11 @@ publishDir = "public"
     url = "/about"
     weight = 4
 
+  [[menu.main]]
+    name = "Subscribe"
+    url = "/subscribe"
+    weight = 5
+
 [params]
     since = 2019
     author = "Manuel Martinez"               # Author's name
