@@ -10,9 +10,9 @@
   
   
   
-  <link rel="prev" href="https://datacenterjourney.com/2020/first-promotion-computer-operator/" />
-  <link rel="next" href="https://datacenterjourney.com/2020/installing-powershell-core-windows/" />
-  <link rel="canonical" href="https://datacenterjourney.com/2020/change-macos-screenshot-defaults/" />
+  <link rel="prev" href="https://datacenterjourney.com/2020/change-macos-screenshot-defaults/" />
+  
+  <link rel="canonical" href="https://datacenterjourney.com/2020/installing-powershell-core-windows/" />
   <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -24,10 +24,10 @@
   <title>
        
        
-           Change MacOS Screenshot Defaults | Datacenter Journey
+           Installing PowerShell Core Windows | Datacenter Journey
        
   </title>
-  <meta name="title" content="Change MacOS Screenshot Defaults | Datacenter Journey">
+  <meta name="title" content="Installing PowerShell Core Windows | Datacenter Journey">
     
   
   <link rel="stylesheet" href="/font/iconfont.css">
@@ -35,17 +35,17 @@
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Change MacOS Screenshot Defaults"/>
-<meta name="twitter:description" content="I&rsquo;ve been taking lots of screenshots lately for blog posts and find myself constantly updating the files and locations. I&rsquo;m not a fan of having to repeatedly rename multiple files or move them into the appropriate folder locations to keep them organized. The process is time-consuming, and since I don&rsquo;t always write the blog post after performing the actions, it can lead to confusion. I did some searching and found that it&rsquo;s straightforward to change the default location and name of screenshot files take with a Mac."/>
+<meta name="twitter:title" content="Installing PowerShell Core Windows"/>
+<meta name="twitter:description" content="I previously wrote an article on how to install PowerShell Core on macOS. I recently needed to install PowerShell Core on a Windows machine and found the process less than ideal compared to macOS. I was able to find a simpler way to install and upgrade PowerShell Core that did not involve me having to open a web browser to download the MSI installer. Below is the command to run in PowerShell and have the MSI downloaded."/>
 
   <script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "BlogPosting",
-  "headline": "Change MacOS Screenshot Defaults",
+  "headline": "Installing PowerShell Core Windows",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https:\/\/datacenterjourney.com\/2020\/change-macos-screenshot-defaults\/"
+    "@id": "https:\/\/datacenterjourney.com\/2020\/installing-powershell-core-windows\/"
   },
   "image": {
     "@type": "ImageObject",
@@ -55,10 +55,10 @@
   },
   "genre": "posts",
   
-  "wordcount":  319 ,
-  "url": "https:\/\/datacenterjourney.com\/2020\/change-macos-screenshot-defaults\/",
-  "datePublished": "2020-02-18T13:55:10-08:00",
-  "dateModified": "2020-02-18T13:55:10-08:00",
+  "wordcount":  262 ,
+  "url": "https:\/\/datacenterjourney.com\/2020\/installing-powershell-core-windows\/",
+  "datePublished": "2020-02-20T20:12:02-08:00",
+  "dateModified": "2020-02-20T20:12:02-08:00",
   
   "publisher": {
     "@type": "Organization",
@@ -134,17 +134,17 @@
       		
 <article class="post-warp">
     <header class="post-header">
-        <h1 class="post-title">Change MacOS Screenshot Defaults</h1>
+        <h1 class="post-title">Installing PowerShell Core Windows</h1>
         <div class="post-meta">
             Written by <a href="https://datacenterjourney.com" rel="author">Manuel Martinez</a> with ♥ 
                 <span class="post-time">
-                    on <time datetime=2020-02-18 >18 February 2020</time>
+                    on <time datetime=2020-02-20 >20 February 2020</time>
                 </span>
                 in
                 <i class="iconfont icon-folder"></i>
                 <span class="post-category">
-                        <a href="https://datacenterjourney.com/categories/macos/"> macOS </a>
-                        <a href="https://datacenterjourney.com/categories/bash/"> bash </a>
+                        <a href="https://datacenterjourney.com/categories/automation/"> Automation </a>
+                        <a href="https://datacenterjourney.com/categories/powershell/"> PowerShell </a>
                         
                 </span>
                 <i class="iconfont icon-timer"></i>
@@ -167,26 +167,36 @@
           
           
 
-          
+          <p>I previously wrote an article on how to install PowerShell Core on macOS. I recently needed to install PowerShell Core on a Windows machine and found the process less than ideal compared to macOS. I was able to find a simpler way to install and upgrade PowerShell Core that did not involve me having to open a web browser to download the MSI installer. Below is the command to run in PowerShell and have the MSI downloaded. I have also included the screenshots for the installation.</p>
 
-<p>I&rsquo;ve been taking lots of screenshots lately for blog posts and find myself constantly updating the files and locations. I&rsquo;m not a fan of having to repeatedly rename multiple files or move them into the appropriate folder locations to keep them organized. The process is time-consuming, and since I don&rsquo;t always write the blog post after performing the actions, it can lead to confusion. I did some searching and found that it&rsquo;s straightforward to change the default location and name of screenshot files take with a Mac. Rather than have to look for this information every time I need to do it decided it would be helpful to me and possibly others to write a quick post on the steps.</p>
-
-<p>Before changing the default location from the Desktop to a location of your choosing, the folder must exist before making the change. Also, be aware that if you delete or move the new screenshots folder, it can cause issues. If you are changing just the default name and not the folder location, then you don&rsquo;t have to worry about folders.</p>
-
-<h4 id="changing-the-default-file-name-of-screenshots">Changing the default file name of screenshots</h4>
-
-<p>Open Terminal and type the commands listed below. Make sure to replace the text between the quotes &ldquo; &rdquo; with the new default name you want to assign. Once that is completed, you must restart the SystemUIServer process by running the <code>killall</code> command. Now any new screenshots taken are saved with the new default name prefix instead of &ldquo;Screen Shot.&rdquo;</p>
-
-<pre><code class="language-bash">defaults write com.apple.screencapture name &quot;HomeLab&quot;
- killall SystemUIServer
+<pre><code class="language-powershell">iex &quot;&amp; { $(irm &lt;https://aka.ms/install-powershell.ps1&gt;) } -UseMSI&quot;
 </code></pre>
 
-<h4 id="changing-the-default-file-location-of-screenshots">Changing the default file location of screenshots</h4>
+<p>Once you run the command, the MSI installer is downloaded and starts the installation wizard. You need to click Next to continue.</p>
 
-<p>Remember that the directory location must exist before changing the default path as the command does not create it for you. If Terminal is not already open, you need to open it and run the subsequent commands. Make sure to change the directory path after &ldquo;location&rdquo; with the folder you want to set.</p>
+<p><img src = "/images/2020/2020-02/PSCoreWindows1.png"></img></p>
 
-<pre><code class="language-bash">defaults write com.apple.screencapture location ~/Documents/Blog/macOS
-</code></pre>
+<p>The next screen shows you the location of the default installation directory. You can either choose to leave the default or change the folder path. Then click Next.</p>
+
+<p><img src = "/images/2020/2020-02/PSCoreWindows2.png"></img></p>
+
+<p>The next screen allows you to select the optional actions to include with the installation. By default, it selects Add PowerShell to Path Environment Variable and Register Windows Event Logging Manifest. In the screenshot, I also decided to include Enable PowerShell Remoting and Add &lsquo;Open here&rsquo; context menus to Explorer. Then click Next, followed by Install to start the installation process.</p>
+
+<p><img src = "/images/2020/2020-02/PSCoreWindows3.png"></img>
+<img src = "/images/2020/2020-02/PSCoreWindows4.png"></img></p>
+
+<p>It takes a little bit to complete the installation, after which you can select the option to Launch PowerShell Core and then click Finish.</p>
+
+<p><img src = "/images/2020/2020-02/PSCoreWindows5.png"></img>
+<img src = "/images/2020/2020-02/PSCoreWindows6.png"></img></p>
+
+<p>Once you do that, you arrive back at the PowerShell window. You can see information about the version of PowerShell Core downloaded along with the link.</p>
+
+<p><img src = "/images/2020/2020-02/PSCoreWindows7.png"></img></p>
+
+<p><br>
+<h3>Subscribe</h3>
+<p><a href="/subscribe">Subscribe via my newsletter or RSS feed</a></p></p>
 
     </div>
 
@@ -200,7 +210,7 @@
            
             <p class="copyright-item">
                     <span>Words:</span>
-                   <span>319</span>
+                   <span>262</span>
             </p>
             
             <p class="copyright-item">
@@ -209,7 +219,7 @@
                 <span>
 
       
-        <a href="//twitter.com/share?url=https%3a%2f%2fdatacenterjourney.com%2f2020%2fchange-macos-screenshot-defaults%2f&amp;text=Change%20MacOS%20Screenshot%20Defaults&amp;via=ManuelM_IT" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fdatacenterjourney.com%2f2020%2finstalling-powershell-core-windows%2f&amp;text=Installing%20PowerShell%20Core%20Windows&amp;via=ManuelM_IT" target="_blank" title="Share on Twitter">
           <i class="iconfont icon-twitter"></i>
         </a>
         
@@ -219,7 +229,7 @@
       
       
       
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fdatacenterjourney.com%2f2020%2fchange-macos-screenshot-defaults%2f&amp;title=Change%20MacOS%20Screenshot%20Defaults" target="_blank" title="Share on LinkedIn">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fdatacenterjourney.com%2f2020%2finstalling-powershell-core-windows%2f&amp;title=Installing%20PowerShell%20Core%20Windows" target="_blank" title="Share on LinkedIn">
           <i class="iconfont icon-linkedin"></i>
         </a>
         
@@ -259,10 +269,8 @@
 
     <div class="post-nav">
         
-        <a href="https://datacenterjourney.com/2020/first-promotion-computer-operator/" class="prev" rel="prev" title="First Promotion - Computer Operator"><i class="iconfont icon-dajiantou"></i>&nbsp;First Promotion - Computer Operator</a>
+        <a href="https://datacenterjourney.com/2020/change-macos-screenshot-defaults/" class="prev" rel="prev" title="Change MacOS Screenshot Defaults"><i class="iconfont icon-dajiantou"></i>&nbsp;Change MacOS Screenshot Defaults</a>
          
-        
-        <a href="https://datacenterjourney.com/2020/installing-powershell-core-windows/" class="next" rel="next" title="Installing PowerShell Core Windows">Installing PowerShell Core Windows&nbsp;<i class="iconfont icon-xiaojiantou"></i></a>
         
     </div>
 

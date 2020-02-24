@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Datacenter Journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 18 Feb 2020 13:55:10 -0800</lastBuildDate>
+    <lastBuildDate>Thu, 20 Feb 2020 20:12:02 -0800</lastBuildDate>
     
 	<atom:link href="https://datacenterjourney.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Installing PowerShell Core Windows</title>
+      <link>https://datacenterjourney.com/2020/installing-powershell-core-windows/</link>
+      <pubDate>Thu, 20 Feb 2020 20:12:02 -0800</pubDate>
+      
+      <guid>https://datacenterjourney.com/2020/installing-powershell-core-windows/</guid>
+      <description>I previously wrote an article on how to install PowerShell Core on macOS. I recently needed to install PowerShell Core on a Windows machine and found the process less than ideal compared to macOS. I was able to find a simpler way to install and upgrade PowerShell Core that did not involve me having to open a web browser to download the MSI installer. Below is the command to run in PowerShell and have the MSI downloaded.</description>
+    </item>
     
     <item>
       <title>Change MacOS Screenshot Defaults</title>

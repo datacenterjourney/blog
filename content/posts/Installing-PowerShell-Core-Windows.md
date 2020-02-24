@@ -1,7 +1,7 @@
 ---
 title: "Installing PowerShell Core Windows"
 date: 2020-02-20T20:12:02-08:00
-draft: true
+draft: false
 description: [Instructions for installing/upgrading PowerShell Core on Windows using PowerShell]
 categories: ["Automation","PowerShell"]
 featured_image:
@@ -35,3 +35,7 @@ It takes a little bit to complete the installation, after which you can select t
 Once you do that, you arrive back at the PowerShell window. You can see information about the version of PowerShell Core downloaded along with the link.
 
 <img src = "/images/2020/2020-02/PSCoreWindows7.png"></img>
+
+<br>
+<h3>Subscribe</h3>
+<p><a href="/subscribe">Subscribe via my newsletter or RSS feed</a></p>
