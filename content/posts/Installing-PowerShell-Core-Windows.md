@@ -11,7 +11,7 @@ author: "Manuel Martinez"
 I previously wrote an article on how to install PowerShell Core on macOS. I recently needed to install PowerShell Core on a Windows machine and found the process less than ideal compared to macOS. I was able to find a simpler way to install and upgrade PowerShell Core that did not involve me having to open a web browser to download the MSI installer. Below is the command to run in PowerShell and have the MSI downloaded. I have also included the screenshots for the installation.
 
 ```powershell
-iex "& { $(irm <https://aka.ms/install-powershell.ps1>) } -UseMSI"
+iex "& { $(irm https://aka.ms/install-powershell.ps1) } -UseMSI"
 ```
 
 Once you run the command, the MSI installer is downloaded and starts the installation wizard. You need to click Next to continue.
