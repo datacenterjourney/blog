@@ -6,10 +6,37 @@
     <description>Recent content in Categories on Datacenter Journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 20 Feb 2020 20:12:02 -0800</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2020 20:06:43 -0700</lastBuildDate>
     
 	<atom:link href="https://datacenterjourney.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>MacOS</title>
+      <link>https://datacenterjourney.com/categories/macos/</link>
+      <pubDate>Wed, 20 May 2020 20:06:43 -0700</pubDate>
+      
+      <guid>https://datacenterjourney.com/categories/macos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VCSA</title>
+      <link>https://datacenterjourney.com/categories/vcsa/</link>
+      <pubDate>Wed, 20 May 2020 20:06:43 -0700</pubDate>
+      
+      <guid>https://datacenterjourney.com/categories/vcsa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VMware</title>
+      <link>https://datacenterjourney.com/categories/vmware/</link>
+      <pubDate>Wed, 20 May 2020 20:06:43 -0700</pubDate>
+      
+      <guid>https://datacenterjourney.com/categories/vmware/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Automation</title>
@@ -39,15 +66,6 @@
     </item>
     
     <item>
-      <title>macOS</title>
-      <link>https://datacenterjourney.com/categories/macos/</link>
-      <pubDate>Tue, 18 Feb 2020 13:55:10 -0800</pubDate>
-      
-      <guid>https://datacenterjourney.com/categories/macos/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Journey</title>
       <link>https://datacenterjourney.com/categories/journey/</link>
       <pubDate>Mon, 10 Feb 2020 18:54:20 -0700</pubDate>
@@ -71,24 +89,6 @@
       <pubDate>Sun, 08 Dec 2019 22:54:33 -0800</pubDate>
       
       <guid>https://datacenterjourney.com/categories/homelab/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>VCSA</title>
-      <link>https://datacenterjourney.com/categories/vcsa/</link>
-      <pubDate>Sun, 08 Dec 2019 22:54:33 -0800</pubDate>
-      
-      <guid>https://datacenterjourney.com/categories/vcsa/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>VMware</title>
-      <link>https://datacenterjourney.com/categories/vmware/</link>
-      <pubDate>Sun, 08 Dec 2019 22:54:33 -0800</pubDate>
-      
-      <guid>https://datacenterjourney.com/categories/vmware/</guid>
       <description></description>
     </item>
     

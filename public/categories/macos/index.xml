@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>macOS on Datacenter Journey</title>
+    <title>MacOS on Datacenter Journey</title>
     <link>https://datacenterjourney.com/categories/macos/</link>
-    <description>Recent content in macOS on Datacenter Journey</description>
+    <description>Recent content in MacOS on Datacenter Journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 18 Feb 2020 13:55:10 -0800</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2020 20:06:43 -0700</lastBuildDate>
     
 	<atom:link href="https://datacenterjourney.com/categories/macos/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Install VCSA Certificates MacOS</title>
+      <link>https://datacenterjourney.com/2020/install-vcsa-certificates-macos/</link>
+      <pubDate>Wed, 20 May 2020 20:06:43 -0700</pubDate>
+      
+      <guid>https://datacenterjourney.com/2020/install-vcsa-certificates-macos/</guid>
+      <description>We&amp;rsquo;ve all come across the pesky invalid certificate error when trying to access vCenter, stating that your connection is not private. Many of us click through and &amp;ldquo;Accept the risk&amp;rdquo; because we know that the site we are accessing is legitimate. However, there are times where not having a trusted website can cause an issue and prevent specific actions. For example, without a trusted certificate, it blocks access to upload files to datastores.</description>
+    </item>
     
     <item>
       <title>Change MacOS Screenshot Defaults</title>

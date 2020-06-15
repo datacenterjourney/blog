@@ -5,8 +5,39 @@
     <description>Recent content in Datacenter Journey on Datacenter Journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 20 Feb 2020 20:12:02 -0800</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2020 20:06:43 -0700</lastBuildDate>
     <atom:link href="https://datacenterjourney.com/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Install VCSA Certificates MacOS</title>
+      <link>https://datacenterjourney.com/2020/install-vcsa-certificates-macos/</link>
+      <pubDate>Wed, 20 May 2020 20:06:43 -0700</pubDate>
+      
+      <guid>https://datacenterjourney.com/2020/install-vcsa-certificates-macos/</guid>
+      <description>&lt;p&gt;We&amp;rsquo;ve all come across the pesky invalid certificate error when trying to access vCenter, stating that your connection is not private. Many of us click through and &amp;ldquo;Accept the risk&amp;rdquo; because we know that the site we are accessing is legitimate. However, there are times where not having a trusted website can cause an issue and prevent specific actions. For example, without a trusted certificate, it blocks access to upload files to datastores. The workaround would be to log in directly to an ESXi host and upload the data that way. That&amp;rsquo;s too much work, in my opinion, which is why I would instead install a trusted certificate and simplify things.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src = &#34;images/2020/2020-05/vcsaCertMac01.png&#34;&gt;&lt;/img&gt;
+&lt;img src = &#34;images/2020/2020-05/vcsaCertMac02.png&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+
+&lt;p&gt;To install the certificate and have the vCenter address show as a secure site, you need to head to the FQDN of your vCenter. For example, in my environment, it would be &lt;a href=&#34;https://mzvmvcs001.martinez.local&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://mzvmvcs001.martinez.local&lt;/a&gt;. Then in the bottom right-hand corner, you will find a link named &amp;ldquo;Download trusted root CA certificates.&amp;rdquo; You will need to click on the link and download the certificate bundle in .zip form. If you are using Chrome, you will need to right-click and select &amp;ldquo;Save Link As&amp;hellip;&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src = &#34;images/2020/2020-05/vcsaCertMac03.png&#34;&gt;&lt;/img&gt;
+&lt;img src = &#34;images/2020/2020-05/vcsaCertMac04.png&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+
+&lt;p&gt;Save the download.zip file to the location of your choice and then open the file to extract the contents. You will find the extracted data in a folder named certs with three sub-folders named lin, mac, and win. Next, open up the Keychain Access application to install the newly downloaded certificate. Browse to the win folder and select the first file that ends in .0.crt. Right-click on the file and select &amp;ldquo;Open With&amp;rdquo; and choose Keychain Access.
+A pop up will appear with the title &amp;ldquo;Add Certificates.&amp;rdquo; In the bottom right corner will be a drop-down to select which Keychain to add the certificate. You will want to add the certificate to &amp;ldquo;System&amp;rdquo; and click on &amp;ldquo;Add,&amp;rdquo; you will be prompted to either use your fingerprint for Touch ID or enter your password to complete the process.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src = &#34;images/2020/2020-05/vcsaCertMac05.png&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+
+&lt;p&gt;In Keychain Access, go to &amp;ldquo;System&amp;rdquo; on the right-hand side and then look for a certificate named &amp;ldquo;CA&amp;rdquo; with an X on the image to the left of the name. To install either double-click on the certificate or right-click it and select &amp;ldquo;Get Info.&amp;rdquo; It will display that the certificate is not trusted, and you might have to expand &amp;ldquo;Trust,&amp;rdquo; by clicking the carat. Hit the drop-down next to &amp;ldquo;When using this certificate&amp;rdquo; and select &amp;ldquo;Always Trust.&amp;rdquo; You will receive a prompt to use Touch ID or Use Password to make the change. After a few seconds, the icon next to the image should change to a + sign. This change means that the certificate is marked as trusted for all users.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src = &#34;images/2020/2020-05/vcsaCertMac06.png&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+
+&lt;p&gt;If you try and access the VCSA at this point, you will no longer get a message that the site is untrusted. If you click on the lock icon next to the FQDN of your vCenter in the address bar, you will see that that site is now secure.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src = &#34;images/2020/2020-05/vcsaCertMac07.png&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Installing PowerShell Core Windows</title>
@@ -537,40 +568,6 @@ sudo pwsh
 &lt;img src = &#34;/images/2019/2019-08/PowerShell4.png&#34;&gt;&lt;/img&gt;&lt;/p&gt;
 
 &lt;p&gt;I hope this was informative and helpful to anyone just getting started with PowerShell on macOS.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>ESXi USB Installer Scripted - Single</title>
-      <link>https://datacenterjourney.com/2019/esxi-usb-installer-scripted-single/</link>
-      <pubDate>Mon, 12 Aug 2019 05:52:43 -0700</pubDate>
-      
-      <guid>https://datacenterjourney.com/2019/esxi-usb-installer-scripted-single/</guid>
-      <description>
-
-&lt;p&gt;In one of my previous posts, I shared the steps to manually configure a USB drive to create an unattended ESXi installation and have it install on itself. The process is not complicated and makes the installation of ESXi much quicker and zero-touch. The manual process of creating USB drives wasn&amp;rsquo;t bad, but it wasn&amp;rsquo;t very efficient and did not scale well. To be able to generate more than a few at a time turned out to be time-consuming.  As you will come to find out, I like to avoid doing things manually and scripting or automating any tasks that I can. This aids in making things more efficient for myself or others and frees everyone up to work on other tasks or projects.&lt;br /&gt;
-&lt;br&gt;
-Over the years, I have become more comfortable and proficient at using PowerShell for scripting tasks. The fact that it is now cross-platform with the release of PowerShell Core makes it my go-to scripting language. One of the great things about PowerShell is that while you are in the shell, you are still able to run native bash or dos commands. I then took the commands for creating the ESXi unattended USB installer and wrapped them in a module that I could share. When I set out to create this, I wanted it to be as simple as possible and make sure that I took care of all the error checking. I will break down the two of the functions that the module exports so that you can understand it and modify for your needs if necessary. Keep in mind that the module is by no means perfect, and there are still many improvements that can be made to make it even better.&lt;br /&gt;
-&lt;br&gt;
-&lt;strong&gt;Note this module will only run on macOS and requires PowerShell to be run with &amp;ldquo;sudo&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;reset-esxusb&#34;&gt;Reset-EsxUsb&lt;/h3&gt;
-
-&lt;p&gt;This cmdlet looks for connected USB drives and will prompt the user to see if they want to wipe them. If the user chooses not to format the USB drive, it will give a list of all the disk(s) currently mounted using &lt;em&gt;diskutil&lt;/em&gt;.  Unless the USB drive(s) to use is new SanDisk USB the user will need to format the drive to have the next module work correctly.&lt;/p&gt;
-
-&lt;h3 id=&#34;new-esxusb&#34;&gt;New-EsxUsb&lt;/h3&gt;
-
-&lt;p&gt;This cmdlet is where all the real magic happens to create the unattended ESXi installer. This command does several things behind the scenes, and I will highlight some of the main ones. First, it checks to see if there any approved ESXi ISO versions mounted. If it finds more than one ISO mounted it will prompt to see which version you want to use. Next, it will check to see if there is a properly formatted USB drive connected to use. Finally, it will start the process of creating a bootable ESXi installer, modify the BOOT.CFG files, and create a ks.cfg kickstart script with the supplied information to configure on the ESXi host.&lt;/p&gt;
-
-&lt;p&gt;I created the module with all of the proper help information and examples, which you can get by running the &lt;code&gt;Get-Help New-EsxUsb&lt;/code&gt; command. Here is a quick example of how to use the cmdlet for a single ESXi installer.&lt;br /&gt;
-&lt;br&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-PowerShell&#34;&gt;New-EsxUsb -EsxPasswd MyP@ssword1 -EsxHostname TST-HOST -EsxVlanId 1919 -EsxIpAddr 192.168.19.19 -EsxSubnet 255.255.255.0 -EsxGateway 192.168.19.1 -EsxDns1 192.168.19.5 -EsxDns2 8.8.8.8 -EsxFirstNic vmnic0 -EsxSecondNic vmnic1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Below you will find a link to the GitHub repository that hosts my UnattendedEsxUsb module. Feel free to download and make any adjustments that you might need. If you find any ways to improve the module or if there is something you would like me to fix, please reach out to me. I&amp;rsquo;ll do my best to make the modifications promptly. Stay tuned for my next blog post where I explain how to create multiple USB installers using a CSV file.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/datacenterjourney/UnattendedEsxUsb&#34; title=&#34;download UnattendedEsxUsb module&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;UnattendedEsxUsb&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
