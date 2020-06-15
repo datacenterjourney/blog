@@ -12,15 +12,6 @@
     
     
     <item>
-      <title>MacOS</title>
-      <link>https://datacenterjourney.com/categories/macos/</link>
-      <pubDate>Wed, 20 May 2020 20:06:43 -0700</pubDate>
-      
-      <guid>https://datacenterjourney.com/categories/macos/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>VCSA</title>
       <link>https://datacenterjourney.com/categories/vcsa/</link>
       <pubDate>Wed, 20 May 2020 20:06:43 -0700</pubDate>
@@ -39,6 +30,15 @@
     </item>
     
     <item>
+      <title>macOS</title>
+      <link>https://datacenterjourney.com/categories/macos/</link>
+      <pubDate>Wed, 20 May 2020 20:06:43 -0700</pubDate>
+      
+      <guid>https://datacenterjourney.com/categories/macos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Automation</title>
       <link>https://datacenterjourney.com/categories/automation/</link>
       <pubDate>Thu, 20 Feb 2020 20:12:02 -0800</pubDate>
@@ -48,7 +48,7 @@
     </item>
     
     <item>
-      <title>Powershell</title>
+      <title>PowerShell</title>
       <link>https://datacenterjourney.com/categories/powershell/</link>
       <pubDate>Thu, 20 Feb 2020 20:12:02 -0800</pubDate>
       

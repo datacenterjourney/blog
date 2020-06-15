@@ -40,18 +40,6 @@
     </url>
   
     <url>
-      <loc>https://datacenterjourney.com/categories/macos/</loc>
-      
-      <lastmod>2020-05-20T20:06:43-07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
       <loc>https://datacenterjourney.com/posts/</loc>
       
       <lastmod>2020-05-20T20:06:43-07:00</lastmod>
@@ -77,6 +65,18 @@
   
     <url>
       <loc>https://datacenterjourney.com/categories/vmware/</loc>
+      
+      <lastmod>2020-05-20T20:06:43-07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://datacenterjourney.com/categories/macos/</loc>
       
       <lastmod>2020-05-20T20:06:43-07:00</lastmod>
       
