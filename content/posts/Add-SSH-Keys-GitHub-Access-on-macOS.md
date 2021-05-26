@@ -118,3 +118,17 @@ If everything is successful you will get a message like the one below with your 
 Hi username! You've successfully authenticated, but GitHub does not 
  provide shell access.
 ```
+
+### If Prompted for Username & Password (Optional)
+
+If you are prompted for a username and password then the chances are that you need to update the URL of orgin to use SSH instead of HTTPS. You will probably notice a message similar to the one below. 
+
+```bash
+Username for 'https://github.com':
+```
+
+To not be prompted for the credentials you will run the following command replacing `username` with your username and `repository` with the name of your repository.
+
+```bash
+git remote set-url origin git@github.com:username/repository.git
+```
